@@ -1,6 +1,23 @@
 @import "bootstrap/bootstrap";
 @import "Ginkgo";
 
+$mainColor: #270089; //主要-紫色
+$mainBlack: #3c3a39; // 深黑色
+$mainOrange: #F08500; // 主要-橘色
+$textGray: #3C3A39; // 灰色字
+
+* {
+  &, &:after, &:before {
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    @include font-smoothing(subpixel-antialiased);
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   position: relative;
 
@@ -13,8 +30,145 @@ body {
 
   font-size: medium;
   text-align: center;
-  font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Noto Sans TC", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   
   // 文字染色，背景色、文字色
   @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
 }
+
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+
+  &:after,
+  &:before {
+    vertical-align: middle !important;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button, select{
+  outline: none !important;
+  box-shadow: none !important;
+  border-width: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+// 背景色、文字色、link
+.bg-mainBlack {
+  background-color: $mainBlack;
+}
+
+.bg-mainColor {
+  background-color: $mainColor;
+}
+
+.footer-ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 0 !important;
+
+  li {
+    display: inline-block;
+    width: 100%;
+
+    a {
+      display: inline-block;
+      color: $textGray;
+      font-size: 1rem;
+      font-weight: 300;
+
+      &:hover, &:active {
+        color: $mainOrange !important;
+      }
+    }
+  }
+}
+
+.footer-a {
+  display: inline-block;
+  color: $mainColor;
+  font-weight: 500;
+  font-size: 1.125rem;
+
+  &:hover, &:active {
+    color: $mainOrange;
+  }
+}
+
+
+
+// text
+.f13-gray {
+  color: $gray-400;
+  font-size: .8rem;
+}
+
+.f18-b-main {
+  color: $mainColor;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.f16-gray {
+  color: $textGray;
+  font-size: 1rem;
+}
+
+
+
+// BOX
+.topNav {
+  display: inline-block;
+  width: 100%;
+  height: 60px; //之後刪掉
+  background-image: linear-gradient(to bottom, #f8f8f8 50%, #ebebeb);
+}
+
+.mainBox {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @include media-breakpoint-down(xl) {
+    width: 90%;
+  }
+
+  border: 1px solid rgba(255, 0, 0, .3); //之後刪掉
+}
+
+.footer-nav {
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem;
+  background: repeating-linear-gradient(135deg, #fafafa, #fafafa 1px, #f1f1f1 0, #f1f1f1 5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
