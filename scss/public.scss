@@ -68,6 +68,23 @@ img {
   object-fit: cover;
 }
 
+.mobile-close {
+
+  @include range-width(0, 770px) {
+    display: none !important;
+  }
+}
+
+.mobile-open {
+  display: none !important;
+
+  @include range-width(0, 770px) {
+    display: inline-block !important;
+  }
+}
+
+
+
 // 背景色、文字色、link
 .bg-mainBlack {
   background-color: $mainBlack;
@@ -92,6 +109,10 @@ img {
       font-size: 1rem;
       font-weight: 300;
 
+      @include media-breakpoint-down(lg) {
+        font-size: .9rem;
+      }
+
       &:hover, &:active {
         color: $mainOrange !important;
       }
@@ -105,8 +126,39 @@ img {
   font-weight: 500;
   font-size: 1.125rem;
 
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+
   &:hover, &:active {
     color: $mainOrange;
+  }
+}
+
+.footer-a-m {
+  display: inline-block;
+  color: #f1f1f1;
+  font-size: .9rem;
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:hover, &:active {
+    color: $mainOrange;
+  }
+
+  &:after {
+    display: inline-block;
+    content: '|';
+    color: #707070;
+    margin: 0 9px 0 10px;
+
+    &:hover, &:active {
+      color: #707070;
+    }
   }
 }
 
@@ -118,15 +170,63 @@ img {
   font-size: .8rem;
 }
 
+.f16-gray {
+  color: $textGray;
+  font-size: 1rem;
+}
+
+.f26-b-black {
+  color: black;
+  font-weight: 500;
+  font-size: 1.6rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.25rem;
+  }
+}
+
+.f16-b-main {
+  color: $mainColor;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .f18-b-main {
   color: $mainColor;
   font-weight: 500;
   font-size: 1.125rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
 }
 
-.f16-gray {
-  color: $textGray;
-  font-size: 1rem;
+.f32-b-main {
+  color: $mainColor;
+  font-weight: 500;
+  font-size: 2.2rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.8rem;
+  }
+}
+
+.f26-main {
+  color: $mainColor;
+  font-weight: 300;
+  font-size: 1.6rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.25rem;
+  }
+}
+
+.lh20 {
+  line-height: 20px;
+}
+
+.lh25 {
+  line-height: 25px;
 }
 
 
@@ -145,11 +245,13 @@ img {
   margin: 0 auto;
   max-width: 1200px;
 
-  @include media-breakpoint-down(xl) {
-    width: 90%;
+  @include media-breakpoint-down(lg) {
+    width: 95%;
   }
 
-  border: 1px solid rgba(255, 0, 0, .3); //之後刪掉
+  @include media-breakpoint-between(xl, xxl) {
+    width: 90%;
+  }
 }
 
 .footer-nav {
@@ -159,6 +261,28 @@ img {
   background: repeating-linear-gradient(135deg, #fafafa, #fafafa 1px, #f1f1f1 0, #f1f1f1 5px);
 }
 
+.whiteBox {
+  display: inline-block;
+  width: 100%;
+  @include border-radius(40px);
+  background-color: white;
+
+  @include media-breakpoint-down(lg) {
+    @include border-radius(20px);
+  }
+}
+
+
+
+// other
+.border-r-b {
+  border-right: 1.5px solid #eef0f2;
+
+  @include media-breakpoint-down(lg) {
+    border-right: 0;
+    border-bottom: 1.5px solid #eef0f2;
+  }
+}
 
 
 
@@ -167,8 +291,7 @@ img {
 
 
 
-
-
-
-
-
+//之後刪掉
+.redborder {
+  border: 1px solid rgba(255, 0, 0, .3);
+}
