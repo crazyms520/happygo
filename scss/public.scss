@@ -6,6 +6,18 @@ $mainBlack: #3c3a39; // 深黑色
 $mainOrange: #F08500; // 主要-橘色
 $textGray: #3C3A39; // 灰色字
 
+@font-face {
+  font-family: "custom-sans-serif";
+  src: local("Noto Sans TC"), local("微軟正黑體"), local("Microsoft JhengHei");
+  unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: "custom-sans-serif";
+  src: local("Roboto"), local("Helvetica Neue");
+  unicode-range: U+00-024F;
+}
+
 * {
   &, &:after, &:before {
     vertical-align: middle;
@@ -30,7 +42,9 @@ body {
 
   font-size: medium;
   text-align: center;
-  font-family: "Roboto", "Noto Sans TC", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+
+  font-family:"custom-sans-serif";
+  // font-family:"Roboto", "Noto Sans TC", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   
   // 文字染色，背景色、文字色
   @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
@@ -173,6 +187,7 @@ img {
 .f16-gray {
   color: $textGray;
   font-size: 1rem;
+  font-weight: 300;
 }
 
 .f26-b-black {
