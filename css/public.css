@@ -3110,6 +3110,14 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .mobile-open { display: none !important; }
 @media screen and (max-width: 769px) and (min-width: 0) { .mobile-open { display: inline-block !important; } }
 
+.text-orange { color: #F08500; }
+
+.text-purple { color: #270089; }
+
+.text-white { color: white !important; }
+
+@media (max-width: 991.98px) { .bg-bell { padding: 5px; background-color: #F08500; } }
+
 .bg-mainBlack { background-color: #3c3a39; }
 
 .bg-mainColor { background-color: #270089; }
@@ -3143,6 +3151,13 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .linktop-b { color: black; }
 .linktop-b:hover, .linktop-b:active { color: black; }
+
+.login-a { display: inline-block; color: #3c3a39; font-size: 1rem; margin-left: 10px; background-color: transparent; }
+.login-a:hover, .login-a:active { color: #270089; }
+@media (max-width: 991.98px) { .login-a { color: #270089; } }
+
+.text-bell { color: #F08500; font-size: 1rem; padding-right: 10px; transform: rotate(-22deg); }
+@media (max-width: 991.98px) { .text-bell { padding-right: 0; color: white; } }
 
 .f13-gray { color: #ced4da; font-size: .8rem; }
 
@@ -3179,7 +3194,9 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .whiteBox { display: inline-block; width: 100%; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; background-color: white; }
 @media (max-width: 991.98px) { .whiteBox { -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; } }
 
-@media (max-width: 991.98px) { .headerLogo { width: 160px; } }
+.offcanvas-start { border: 0 important; }
+
+@media (max-width: 991.98px) { .headerLogo { width: 180px; } }
 
 .border-r-b { border-right: 1.5px solid #eef0f2; }
 @media (max-width: 991.98px) { .border-r-b { border-right: 0; border-bottom: 1.5px solid #eef0f2; } }
@@ -3201,9 +3218,28 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .change input:checked ~ .change_slider { background-color: #3C3A39; }
 .change input:checked ~ .change_slider:before { transform: translate(104%, -50%); }
 
-.swiper { width: 100%; height: 100%; }
+.slick-slider { margin: 0 !important; }
 
-.swiper-slide { text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; }
-.swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.marquee { display: inline-block; width: 300px; }
+@media (max-width: 991.98px) { .marquee { width: 85%; } }
+
+.marquee-slide { width: 500px; margin-right: 20px; }
+.marquee-slide .inner { text-align: left; margin: 0 15px; color: black; font-size: 1rem; }
+.marquee-slide .inner > a { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; color: #F08500; }
+@media (max-width: 991.98px) { .marquee-slide .inner > a { color: white; } }
+.marquee-slide .inner > a:hover, .marquee-slide .inner > a:active { text-decoration: underline !important; }
+
+.search-box { transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s; width: 80px; height: 40px; border-radius: 20px; border: none; cursor: pointer; background: #ebebeb; }
+.search-box::placeholder { color: black; }
+.search-box + label .search-icon { color: black; }
+.search-box:hover { color: white; background: #c8c8c8; box-shadow: 0 0 0 5px #3d4752; }
+.search-box:hover + label .search-icon { color: white; }
+.search-box:focus { transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s; border: none; outline: none; box-shadow: none; padding-left: 15px; cursor: text; width: 150px; border-radius: auto; background: #ebebeb; color: black; }
+.search-box:focus + label .search-icon { color: black; }
+.search-box:not(:focus) { text-indent: -5000px; }
+
+#search-submit { position: relative; right: -5000px; }
+
+.search-icon { position: relative; left: -30px; color: white; cursor: pointer; }
 
 .redborder { border: 1px solid rgba(255, 0, 0, 0.3); }
