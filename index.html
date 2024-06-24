@@ -30,9 +30,9 @@
     <!-- header -->
     <header>
       <!-- top nav -->
-      <div class="topNav mobile-close">
+      <div class="topNav mobile-close-m">
         <div class="mainBox">
-          <div class="row justify-content-between">
+          <div class="row mx-auto justify-content-between">
             <div class="col-auto">
               <label class="change">
                 <input type="checkbox">
@@ -53,11 +53,11 @@
 
       <!-- Header logo -->
       <div class="bg-white">
-        <div class="mainBox py-lg-2 py-0">
-          <div class="row justify-content-between align-items-center">
+        <div class="fullBox py-lg-2 py-0">
+          <div class="row mx-auto justify-content-between align-items-center">
             <!-- 跑馬燈 -->
             <div class="col-lg-4 col-12 px-lg-3 px-0">
-              <div class="d-flex bg-bell justify-content-lg-start justify-content-around">
+              <div class="d-flex bg-bell justify-content-lg-start justify-content-around px-lg-0 px-3">
                 <i class="bi bi-bell text-bell"></i>
                 <div class="marquee top-marquee">
                   <div class="marquee-slide">
@@ -135,15 +135,17 @@
               </div>
             </div>
             <!-- 手機的漢堡icon -->
-            <div class="col-3 mobile-open">
+            <div class="col-3 mobile-open-m">
               <div class="d-flex justify-content-start">
                 <i class="bi bi-list fs-4 text-purple" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
               </div>
             </div>
             <!-- logo -->
-            <div class="col-lg-4 col-6 px-0"><img src="images/logo.svg" class="headerLogo img-fluid"></div>
-            <div class="col-lg-4 col-3 d-flex justify-content-end  align-items-center">
-              <!-- <i class="bi bi-search"></i> -->
+            <div class="col-lg-4 col-6 px-0 py-lg-0 py-1"><img src="images/logo.svg" class="headerLogo img-fluid"></div>
+            <div class="col-lg-4 col-3 d-flex justify-content-end  align-items-center">              
+              <button type="button" class="btn-search" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="mobile-close">搜尋</span>
+              </button>
               <a class="login-a"><i class="bi bi-person-fill me-1 fs-5"></i><span class="mobile-close">登入</span></a>
               <!-- <button class="login-a"><i class="bi bi-person-fill me-1 fs-5"></i><span>登入</span></button> -->
             </div>
@@ -151,34 +153,250 @@
         </div>
       </div>
       
-      <!-- 手機漢堡 展開 -->
+      <!-- 手機漢堡選單 展開 -->
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <div class="offcanvas-header bg-mainColor-mobile">
+          <label class="change">
+            <input type="checkbox">
+            <span class="change_label change_label-on">個人</span>
+            <span class="change_slider"></span>
+            <span class="change_label change_label-off">企業</span>
+          </label>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        <div class="offcanvas-body p-0">
+          <div class="row mx-auto">
+            <div class="col-6 py-2">
+              <a class="linktop-p me-3"><i class="icon-gift align-baseline me-2"></i><span>關於快樂購</span></a>
+            </div>
+            <div class="col-6 py-2 border-start">
+              <a class="linktop-b"><i class="icon-phone align-baseline me-2"></i><span>下載APP</span></a>
+            </div>
+            <div class="col-12 py-3 ps-4 text-start border-top border-bottom">
+              <a href="index.html" class="linktop-p fw-normal">回首頁</a>
+            </div>
           </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+
+          <!-- 選單 -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button nav-m" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav01" aria-expanded="true" aria-controls="mobileNav01">
+                  點數使用
+                </button>
+              </h2>
+              <div id="mobileNav01" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">線上兌點</a>
+                 <a class="navLink-m">線上轉點</a>
+                 <a class="navLink-m">登錄點數</a>
+                 <a class="navLink-m">點數轉贈</a>
+                 <a class="navLink-m">愛心捐贈</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav02" aria-expanded="false" aria-controls="mobileNav02">
+                  最新優惠
+                </button>
+              </h2>
+              <div id="mobileNav02" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">快速累點</a>
+                 <a class="navLink-m">兌點優惠</a>
+                 <a class="navLink-m">線上購物</a>
+                 <a class="navLink-m">商圈活動</a>
+                 <a class="navLink-m">金融支付</a>
+                 <a class="navLink-m">APP獨享</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav03" aria-expanded="false" aria-controls="mobileNav03">
+                  數位服務
+                </button>
+              </h2>
+              <div id="mobileNav03" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m" target="_blank">購賺點</a>
+                 <a class="navLink-m" target="_blank">HAPPY GO Pay</a>
+                 <a class="navLink-m" target="_blank">iMoney</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav04" aria-expanded="false" aria-controls="mobileNav04">
+                  卡友福利
+                </button>
+              </h2>
+              <div id="mobileNav04" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m" target="_blank">會員分級訂閱制</a>
+                 <a class="navLink-m" target="_blank">週二會員日</a>
+                 <a class="navLink-m" target="_blank">發票活動</a>
+                 <a class="navLink-m" target="_blank">累積型活動</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav05" aria-expanded="false" aria-controls="mobileNav05">
+                  會員中心
+                </button>
+              </h2>
+              <div id="mobileNav05" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">點數及交易明細查詢</a>
+                 <a class="navLink-m">個人資料維護</a>
+                 <a class="navLink-m">卡友優惠資訊設定</a>
+                 <a class="navLink-m">變更密碼</a>
+                 <a class="navLink-m">電子發票</a>
+                 <a class="navLink-m">得獎公告</a>
+                 <a class="navLink-m">會員登入頁</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav06" aria-expanded="false" aria-controls="mobileNav06">
+                  客服中心
+                </button>
+              </h2>
+              <div id="mobileNav06" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">答客問</a>
+                 <a class="navLink-m">線上留言</a>
+                 <a class="navLink-m">聯絡客服</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 社群 -->
+          <div class="pt-4">
+            <a class="pe-2" href="https://www.facebook.com/happygocard" target="_blank">
+              <img src="images/icon-fb.svg" class="img-fluid">
+            </a>
+            <a class="pe-2" href="https://www.instagram.com/happygo_tw/" target="_blank">
+              <img src="images/icon-ig.svg" class="img-fluid">
+            </a>
+            <a class="pe-2" href="https://page.line.me/sst6238v?oat__id=2080208&openQrModal=true" target="_blank">
+              <img src="images/icon-line.svg" class="img-fluid">
+            </a>
+            <a class="pe-2" href="https://www.youtube.com/channel/UC4FjWjl45OspGI1fOZgmfWg" target="_blank">
+              <img src="images/icon-youtube.svg" class="img-fluid">
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- nav -->
-      <div class="bg-mainColor">
-        <div class="mainBox redborder"></div>
+      <!-- 網頁選單 -->
+      <div class="bg-mainColor-mobile">
+        <div class="fullBox">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="true">點數使用</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">最新優惠</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">數位服務</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="creditCard-tab" data-bs-toggle="tab" data-bs-target="#creditCard" type="button" role="tab" aria-controls="creditCard" aria-selected="false">卡友福利</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="member-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="member" aria-selected="false">會員中心</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 網頁選單-次選單 -->
+      <div class="tab-content">
+        <!-- 點數使用 -->
+        <div class="tab-pane active position-relative" id="points" role="tabpanel" aria-labelledby="points-tab">
+          <!-- web -->
+          <div class="d-flex navBox position-absolute top-50 start-50 translate-middle mobile-close-m">
+            <ul class="mainNav-ul">
+              <li class="col-auto"><a class="shadow-sm">線上兌點</a></li>
+              <li class="col-auto"><a class="shadow-sm">線上轉點</a></li>
+              <li class="col-auto"><a class="shadow-sm">登錄點數</a></li>
+            </ul>
+            <ul class="mainNav-ul">
+              <li class="col-auto"><a class="shadow-sm">點數轉移</a></li>
+              <li class="col-auto"><a class="shadow-sm">愛心捐贈</a></li>
+            </ul>
+          </div>
+          <!-- mobile -->
+          <div class="d-flex navBox position-absolute bottom-0 start-0 mobile-open-m">
+            <ul class="mainNav-ul-m">
+              <li class="col-4"><a class="shadow-sm">線上兌點</a></li>
+              <li class="col-4"><a class="shadow-sm">線上轉點</a></li>
+              <li class="col-4"><a class="shadow-sm">登錄點數</a></li>
+              <li class="col-4"><a class="shadow-sm">點數轉移</a></li>
+              <li class="col-4"><a class="shadow-sm">愛心捐贈</a></li>
+            </ul>
+          </div>
+          <picture>
+            <source srcset="images/nav-bg01-m.png" media="(max-width: 770px)">
+            <img src="images/nav-bg01.png" alt="">
+          </picture>
+        </div>
+        <!-- 最新優惠 -->
+        <div class="tab-pane" id="news" role="tabpanel" aria-labelledby="news-tab">2</div>
+        <!-- 數位服務 -->
+        <div class="tab-pane" id="services" role="tabpanel" aria-labelledby="services-tab">3</div>
+        <!-- 卡友福利 -->
+        <div class="tab-pane" id="creditCard" role="tabpanel" aria-labelledby="creditCard-tab">4</div>
+        <!-- 會員中心 -->
+        <div class="tab-pane" id="member" role="tabpanel" aria-labelledby="member-tab">5</div>
       </div>
     </header>
+
+    <!-- search光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row lightBox mb-5">
+              <div class="col-12 mb-3">
+                <span class="f32-b-main me-2 lh25">SEARCH</span>
+                <span class="f26-main">搜尋</span>
+              </div>
+              <div class="col-12 searchBox">
+                <div class="input-group">
+                   <button class="btn-input-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">特約商店</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">特約商店</a></li>
+                      <li><a class="dropdown-item" href="#">熱門活動</a></li>
+                    </ul>
+                  <input type="text" class="form-control btn-input-noBorder" placeholder="請輸入查詢關鍵字">
+                  <button type="button" class="btn-input-search"><img src="images/icon-search-purple.svg"></button>
+                </div>
+              </div>
+              <div class="col-12 my-2">
+                <span class="f13-black">熱門：</span>
+                <a class="link-orange13">母親節優惠</a>
+                <a class="link-orange13">限時快閃</a>
+                <a class="link-orange13">SOGO</a>
+                <a class="link-orange13">聯名</a>
+                <a class="link-orange13">登入禮</a>
+                <a class="link-orange13">會員日</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 黃金大banner -->
     <div class="center">
@@ -199,8 +417,8 @@
 
     
     <main class="mainBox container-fluid mb-5">
-      <!-- 聯絡我們 -->
-      <div class="whiteBox shadow p-xl-5 p-4 mb-lg-4 mb-0">
+      <!-- 客服中心 -->
+      <div class="whiteBox shadow p-xl-5 p-4 mb-md-4 mb-0">
         <div class="row">
           <div class="col-12 text-lg-start text-center mb-4">
             <span class="f32-b-main me-2 d-lg-inline-block d-block lh25">CUSTOMER SERVICE</span>
@@ -244,7 +462,7 @@
             <span class="f32-b-main me-2 lh25">FOLLOWS US</span>
             <span class="f26-main">關注我們</span>
           </div>
-          <div class="col-4 border-r-b">
+          <div class="col-xl-4 col-5 border-r-b">
             <div class="row  align-items-center">
               <div class="col-4"><span class="f20-b-black me-2">官方社群</span></div>
               <div class="col-8 ps-0 text-start">
@@ -263,10 +481,10 @@
               </div>
             </div>
           </div>
-          <div class="col-8 border-r-b">
+          <div class="col-xl-8 col-7 border-r-b">
             <div class="row align-items-center">
-              <div class="col-2"><span class="f20-b-black me-2">下載APP</span></div>
-              <div class="col-10 ps-0 text-start">
+              <div class="col-xl-2 col-3"><span class="f20-b-black me-2">下載APP</span></div>
+              <div class="col-xl-10 col-9 ps-0 text-start">
                 <a><img src="images/appstore.svg" class="img-fluid me-2"></a>
                 <a><img src="images/googleplay.svg" class="img-fluid"></a>
               </div>

@@ -1,5 +1,7 @@
-@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1718875870') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1718875870') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1718875870') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1718875870') format('svg'); }
+@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1719227462') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1719227462') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1719227462') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1719227462') format('svg'); }
 *[class^="icon-"]:before, *[class*=" icon-"]:before { font-family: "icon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; }
+
+.icon-Group-585:before { content: "\e903"; }
 
 .icon-gift:before { content: "\e901"; }
 
