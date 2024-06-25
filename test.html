@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/public.css">
 
     <!-- 共用外部 css 檔案 -->  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,10 +131,107 @@
       <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" style="background-color: yellow; height: 300px;">4</div>
     </div>
 
+    <!-- Nav tabs v2 -->
+    <div class="mainBox">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="about01-tab" data-bs-toggle="tab" data-bs-target="#about01" type="button" role="tab" aria-controls="about01" aria-selected="true">about01</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="about02-tab" data-bs-toggle="tab" data-bs-target="#about02" type="button" role="tab" aria-controls="about02" aria-selected="false">about02</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="about03-tab" data-bs-toggle="tab" data-bs-target="#about03" type="button" role="tab" aria-controls="about03" aria-selected="false">about03</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="about04-tab" data-bs-toggle="tab" data-bs-target="#about04" type="button" role="tab" aria-controls="about04" aria-selected="false">about04</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane" id="about01" role="tabpanel" aria-labelledby="about01-tab" style="background-color: yellow; height: 300px;">
+        <div class="mainBox redborder">
+          dsdsfadfsaf
+        </div>
+      </div>
+      <div class="tab-pane" id="about02" role="tabpanel" aria-labelledby="about02-tab" style="background-color: yellow; height: 300px;">2</div>
+      <div class="tab-pane" id="about03" role="tabpanel" aria-labelledby="about03-tab" style="background-color: yellow; height: 300px;">3</div>
+      <div class="tab-pane" id="about04" role="tabpanel" aria-labelledby="about04-tab" style="background-color: yellow; height: 300px;">4</div>
+    </div>
+
+    <!-- 跑馬燈 -->
+    <h1>Slick Marquee Test</h1>
+    <div class="marquee top-marquee">
+      <div class="marquee-slide">
+        <div class="inner">
+          <a href='www.google.com'> 1 </a>
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         2
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+          3
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         4
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         5
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         6
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         7
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         8
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         9
+        </div>
+      </div>
+      <div class="marquee-slide">
+        <div class="inner">
+         10
+        </div>
+      </div>
+    </div>
+
+    <!-- search -->
+    <form class="search-container">
+      <input id="search-box" type="text" class="search-box" name="q" />
+      <label for="search-box" placeholder="搜尋"> <i class="bi bi-search search-icon"></i></label>
+      <input type="submit" id="search-submit" />
+    </form>
+
+
+
     <!-- 共用外部 js 檔案 -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"></script> -->
+      <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+     
   </body>
 </html>
 

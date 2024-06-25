@@ -77,6 +77,13 @@ img {
   }
 }
 
+.mobile-close-m {
+  @include range-width(0, 990px) {
+    display: none !important;
+  }
+}
+
+
 // 手機版打開
 .mobile-open {
   display: none !important;
@@ -85,15 +92,70 @@ img {
   }
 }
 
+.mobile-open-m {
+  display: none !important;
+  @include range-width(0, 990px) {
+    display: inline-block !important;
+  }
+}
+
+
 
 
 // 背景色、文字色、link
+.text-orange {color: $mainOrange;}
+.text-purple {color: $mainColor !important;}
+.text-white {color:white !important;}
+
+.bg-bell {
+  @include media-breakpoint-down(lg) {
+    padding: 5px;
+    background-color: $mainOrange
+  }
+}
+
 .bg-mainBlack {
   background-color: $mainBlack;
 }
 
 .bg-mainColor {
   background-color: $mainColor;
+}
+
+.bg-mainColor-mobile {
+  background-color: $mainColor;
+
+  @include media-breakpoint-down(lg) {
+    background-color: #f6f4ff;
+  }
+}
+
+.btn-search {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #f1f1f1;
+  color: #B5B5B6;
+  font-size: 1rem;
+  @include border-radius(50px);
+
+  @include media-breakpoint-down(md) {
+    background-color: transparent;
+    padding: 0;
+    margin-top: -3px;
+  }
+
+  &:before {
+    display: inline-block;
+    font-family: 'icon';
+    content: '\e903';
+    color: $mainBlack;
+    margin: 0 3px;
+
+    @include media-breakpoint-down(md) {
+      color: $mainColor;
+      margin: 0;
+    }
+  } 
 }
 
 .footer-ul {
@@ -164,6 +226,26 @@ img {
   }
 }
 
+.moreLink {
+  display: inline-block;
+  color: $mainColor;
+  font-size: 1rem;
+
+  &:after {
+    display: inline-block;
+    content: '\e900';
+    font-family: "icon";
+    color: $mainColor;
+    margin-left: 3px;
+    margin-top: -4px;
+  }
+
+  &:hover, &:active {
+    color: $mainColor;
+    text-decoration: underline !important;
+  }
+}
+
 .countLink {
   display: inline-block;
   color: black;
@@ -220,11 +302,230 @@ img {
   }
 }
 
+.login-a {
+  display: inline-block;
+  color: $mainBlack;
+  font-size: 1rem;
+  margin-left: 10px;
+  background-color: transparent;
+
+  &:hover, &:active {
+    color: $mainColor;
+  }
+
+  @include media-breakpoint-down(lg) {
+    color: $mainColor;
+  }
+}
+
+.mainNav-ul {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  > li {
+    padding-bottom: 15px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+    
+    > a {
+      display: inline-block;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-weight: 300;
+      font-size: 1rem;
+      color: $mainColor !important;
+      @include border-radius(100px);
+      background-color: white;
+
+      &:before {
+        display: inline-block;
+        content: "・";
+        color: $mainColor;
+        padding-right: 15px;
+      }
+
+      &:after {
+        display: inline-block;
+        content: '\e900';
+        font-family: "icon";
+        color: $mainColor;
+        padding-left: 15px;
+      }
+
+      &:hover ,&:active {
+        color: white !important;
+        background-color: $mainColor;
+
+        &:before {
+          color: white;
+        }
+
+        &:after {
+          color: white;
+        }
+      }
+
+    }
+  }
+}
+
+.mainNav-ul-m {
+
+  @include media-breakpoint-down(lg) {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 2%;
+    padding-left: 0;
+    border-bottom: 5px solid $mainColor;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 1%;
+  }
+
+
+  > li {
+    padding:0 10px 15px 10px;
+
+    @include media-breakpoint-down(lg) {
+      padding:0 8px 8px 8px;
+    }
+   
+    > a {
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-weight: 300;
+      font-size: 1rem;
+      color: $mainColor !important;
+      background-color: white;
+      border: 1px solid $mainColor;
+
+      @include media-breakpoint-down(lg) {
+        font-size: .9rem;
+        padding: 0.5rem 0.5rem;
+      }
+
+      &:before {
+        display: inline-block;
+        content: "・";
+        color: $mainColor;
+        padding-right: 15px;
+
+        @include media-breakpoint-down(lg) {
+          padding-right: 5px;
+        }
+      }
+
+      &:hover ,&:active {
+        color: white !important;
+        background-color: $mainColor;
+
+        &:before {
+          color: white;
+        }
+      }
+
+    }
+  }
+}
+
+.navLink-m {
+  display: inline-block;
+  width: 100%;
+  color: $mainBlack;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: .9rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    display: inline-block;
+    content: 'ㄴ';
+    color: #e0e0e0;
+    padding-right: 5px;
+  }
+
+  &:hover, &:active {
+    color: $mainColor;
+
+    &:before {
+      color: #e0e0e0;
+    }
+  }
+}
+
+.link-orange13 {
+  display: inline-block;
+  color: $mainOrange;
+  font-size: .8rem;
+  font-weight: 300;
+  margin-left: 10px;
+
+  &:hover, &:active {
+    color: $mainOrange;
+    text-decoration: underline !important;
+  }
+}
+
+.btn-input-search {
+  background-color: transparent;
+  color: $mainColor !important;
+  font-weight: 300;
+
+  &:after {
+    border-top: 0.3em solid $mainColor !important;
+  }
+}
+
+.btn-input-noBorder {
+  border-left: 1px solid $mainColor !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+
+  &::placeholder {
+    color: #b5b5b6;
+    font-weight: 300;
+  }
+}
+
 
 
 // text
+.text-bell {
+  color: $mainOrange;
+  font-size: 1rem;
+  padding-right: 10px;
+  transform:rotate(-22deg);
+
+  @include media-breakpoint-down(lg) {
+    padding-right: 0;
+    color: white;
+  }
+}
+
 .f13-gray {
   color: $gray-400;
+  font-size: .8rem;
+}
+
+.f13-black {
+  color: $mainBlack;
   font-size: .8rem;
 }
 
@@ -297,11 +598,52 @@ img {
 
 
 // BOX
+.bgBox {
+  display: inline-block;
+  width: 100%;
+  background-image: url(../images/bgL.svg), url(../images/bgR.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position:top left, bottom right;
+
+  @include media-breakpoint-down(lg) {
+    background-position: -29px -3%, 112% bottom;
+    background-size: 50%, 50%;
+  }
+}
+
+.imgBanner {
+  max-width: 720px;
+
+  &:nth-child(2n+2) {
+    padding:0 5px;
+  }
+}
+.navBox {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .topNav {
   display: inline-block;
   width: 100%;
   padding: 10px 0;
   background-image: linear-gradient(to bottom, #f8f8f8 50%, #ebebeb);
+}
+
+.fullBox {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: 90%;
+  }
 }
 
 .mainBox {
@@ -337,19 +679,102 @@ img {
   }
 }
 
+.lightBox {
+  display: inline-block;
+  width: 100%;
+  // max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.searchBox {
+  display: inline-block;
+  border: 1px solid $mainColor;
+  @include border-radius(50px);
+  padding: 3px 10px;
+}
+
+
+
+// boostrap
+.form-control {
+  &:focus {
+    box-shadow: unset !important;
+  }
+}
+
+// .modal-dialog {
+//   max-width: 900px !important;
+// }
+.modal-header {
+  border-bottom: 0 !important;
+}
+
+.modal-content {
+  border-radius: 1.3rem !important;
+}
+
+.offcanvas-start {
+  border: 0 !important;
+}
+
+.nav-pills {
+  .nav-link {
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 0 !important;
+
+    @include media-breakpoint-down(lg) {
+      color: $mainBlack;
+      font-size: .9rem;
+      padding: 0.5rem 0.5rem !important;
+    }
+
+    &.active {
+      background-color: $mainOrange !important;
+
+      @include media-breakpoint-down(lg) {
+        background-color: $mainColor !important;
+      }
+    }
+  }
+}
+
+.accordion-item {
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-right: 0;
+  border-left: 0;
+}
+
+.accordion-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  &.nav-m {
+    color: $mainColor;
+
+    &:not(.collapsed) {
+      color: $mainOrange;
+      background-color: #f8f8f8;
+    }
+  }
+  
+}
+
 
 
 // other
 .headerLogo {
   @include media-breakpoint-down(lg) {
-    width: 160px;
+    width: 180px;
   }
 }
 
 .border-r-b {
   border-right: 1.5px solid #eef0f2;
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     border-right: 0;
     border-bottom: 1.5px solid #eef0f2;
   }
@@ -377,18 +802,15 @@ img {
 }
 
 .change_label-on {
-  // opacity: 0.2;
   color: $mainColor;
 }
 
 .change input:checked ~ {
   .change_label-off {
-    // opacity: 0.2;
     color: $mainColor;
   }
 
   .change_label-on {
-    // opacity: 1;
     color: black;
   }
 }
@@ -431,31 +853,177 @@ img {
 }
 // 個人/企業，開關切換 end
 
-// 黃金banner start
+
+// 跑馬燈 start
+.slick-slider {
+  margin: 0 !important;
+}
+
+.marquee  {
+  display: inline-block;
+  width: 300px;
+
+  @include media-breakpoint-down(lg) {
+    width: 85%;
+  }
+}
+
+.marquee-slide {
+  width: 500px;
+  margin-right: 20px;
+
+  .inner {
+    text-align: left;
+    margin: 0 15px;
+    color: black;
+    font-size: 1rem;
+
+    > a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // max-height: 50px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      color: $mainOrange;
+
+      @include media-breakpoint-down(lg) {
+        color: white;
+      }
+
+      &:hover, &:active {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
+// 跑馬燈 end
+
+// search bar start 沒有用到
+$tl: 0.6s; // transition length
+
+.search-box {
+  transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgb(235, 235, 235);
+
+  &::placeholder {
+    color: black;
+  }
+
+  & + label .search-icon {
+    color: black
+  }
+
+  &:hover {
+    color: white;
+    background: rgb(200, 200, 200);
+    box-shadow: 0 0 0 5px rgb(61, 71, 82);
+
+    & + label .search-icon {
+      color: white
+    }
+  }
+
+  &:focus {
+    transition: width $tl cubic-bezier(0,1.22,.66,1.39), border-radius $tl, background $tl;
+    border: none;outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 150px;
+    border-radius: auto;
+    background: rgb(235, 235, 235);
+    color: black;
+
+    & + label .search-icon {
+      color: black;
+    }
+  }
+
+  &:not(:focus) {
+  text-indent:-5000px;
+  } // for more-graceful falling back (:not browsers likely support indent)
+}
+
+#search-submit {
+  position: relative;
+  right: -5000px;
+}
+// search bar end 沒有用到
+
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+
+// 黃金大banner
+.swiper-pagination-bullets {
+  &.swiper-pagination-horizontal {
+    bottom: -24px !important;
+    background-color: #f8f8f8;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $mainBlack !important;
+}
+
+
+
+// 合作店家
 .swiper {
-  width: 100%;
-  height: 100%;
+  &.storeBoxs {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &.store {
+    text-align: center;
+    font-size: 18px;
+    height: calc((100% - 30px) / 2) !important;
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // d
+    // border: 1px solid red;
   }
 }
-// 黃金banner end
 
+.storeIconBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to bottom,  #ffffff 0%,#fffaf6 100%); 
+  @include border-radius(30px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 20px;
 
+  > p {
+    font-size: 1.75rem;
+    color: $mainColor;
 
+    @include media-breakpoint-down(lg) {
+      font-size: 1.1rem;
+    }
+  }
+}
 
 
 
