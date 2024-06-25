@@ -964,9 +964,20 @@ $tl: 0.6s; // transition length
 }
 
 // 黃金大banner
+.mySwiper {
+  padding: 24px 0 !important;
+
+  .swiper-slide {
+    @include media-breakpoint-down(lg) {
+      max-width: 90%;
+      padding: 0 .5rem;
+    }
+  }
+}
+
 .swiper-pagination-bullets {
   &.swiper-pagination-horizontal {
-    bottom: -24px !important;
+    // bottom: -24px !important;
     background-color: #f8f8f8;
   }
 }
@@ -975,10 +986,9 @@ $tl: 0.6s; // transition length
   background: $mainBlack !important;
 }
 
-
-
 // 合作店家
 .swiper {
+
   &.storeBoxs {
     width: 100%;
     height: 100%;

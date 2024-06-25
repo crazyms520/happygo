@@ -22,15 +22,24 @@ $(function() {
   // 黃金大Banner
   var swiper = new Swiper(".mySwiper", {
   	autoplay: {
-   	delay: 3000,
+   	  delay: 3000,
  		},
-    slidesPerView: 3,
-    spaceBetween: 10,
+    loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
     freeMode: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".mySwiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      992: {   
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: false,
+        slidesPerGroup: 3,
+      },
+    }
   });
 
   var swiper = new Swiper(".mySwiper2", {
@@ -38,10 +47,15 @@ $(function() {
     grid: {
       rows: 2,
     },
+    slidesPerGroup: 3,
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination2",
       clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 	// $('.center').slick({
@@ -72,5 +86,10 @@ $(function() {
 	//     }
 	//   ]
 	// });
+
+  // 跑馬燈關閉
+  $('.mobile-marquee-close').on('click', function(){
+    $('.marquee-wrapper').remove();
+  });
 
 });
