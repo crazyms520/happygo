@@ -226,6 +226,26 @@ img {
   }
 }
 
+.moreLink {
+  display: inline-block;
+  color: $mainColor;
+  font-size: 1rem;
+
+  &:after {
+    display: inline-block;
+    content: '\e900';
+    font-family: "icon";
+    color: $mainColor;
+    margin-left: 3px;
+    margin-top: -4px;
+  }
+
+  &:hover, &:active {
+    color: $mainColor;
+    text-decoration: underline !important;
+  }
+}
+
 .countLink {
   display: inline-block;
   color: black;
@@ -578,6 +598,26 @@ img {
 
 
 // BOX
+.bgBox {
+  display: inline-block;
+  width: 100%;
+  background-image: url(../images/bgL.svg), url(../images/bgR.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position:top left, bottom right;
+
+  @include media-breakpoint-down(lg) {
+    background-position: -29px -3%, 112% bottom;
+    background-size: 50%, 50%;
+  }
+}
+
+.imgBanner {
+  max-width: 720px;
+
+  &:nth-child(2n+2) {
+    padding:0 5px;
+  }
+}
 .navBox {
   display: inline-block;
   width: 100%;
@@ -814,7 +854,6 @@ img {
 // 個人/企業，開關切換 end
 
 
-
 // 跑馬燈 start
 .slick-slider {
   margin: 0 !important;
@@ -860,6 +899,7 @@ img {
 }
 // 跑馬燈 end
 
+// search bar start 沒有用到
 $tl: 0.6s; // transition length
 
 .search-box {
@@ -914,12 +954,75 @@ $tl: 0.6s; // transition length
   position: relative;
   right: -5000px;
 }
+// search bar end 沒有用到
 
 .search-icon {
   position: relative;
   left: -30px;
   color: white;
   cursor: pointer;
+}
+
+// 黃金大banner
+.swiper-pagination-bullets {
+  &.swiper-pagination-horizontal {
+    bottom: -24px !important;
+    background-color: #f8f8f8;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $mainBlack !important;
+}
+
+
+
+// 合作店家
+.swiper {
+  &.storeBoxs {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.swiper-slide {
+  &.store {
+    text-align: center;
+    font-size: 18px;
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // d
+    // border: 1px solid red;
+  }
+}
+
+.storeIconBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to bottom,  #ffffff 0%,#fffaf6 100%); 
+  @include border-radius(30px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 20px;
+
+  > p {
+    font-size: 1.75rem;
+    color: $mainColor;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1.1rem;
+    }
+  }
 }
 
 
