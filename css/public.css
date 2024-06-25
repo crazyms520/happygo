@@ -3332,7 +3332,10 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .search-icon { position: relative; left: -30px; color: white; cursor: pointer; }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal { bottom: -24px !important; background-color: #f8f8f8; }
+.mySwiper { padding: 24px 0 !important; }
+@media (max-width: 991.98px) { .mySwiper .swiper-slide { max-width: 90%; padding: 0 .5rem; } }
+
+.swiper-pagination-bullets.swiper-pagination-horizontal { background-color: #f8f8f8; }
 
 .swiper-pagination-bullet-active { background: #3c3a39 !important; }
 

@@ -56,7 +56,7 @@
         <div class="fullBox py-lg-2 py-0">
           <div class="row mx-auto justify-content-between align-items-center">
             <!-- 跑馬燈 -->
-            <div class="col-lg-4 col-12 px-lg-3 px-0">
+            <div class="marquee-wrapper col-lg-4 col-12 px-lg-3 px-0">
               <div class="d-flex bg-bell justify-content-lg-start justify-content-around px-lg-0 px-3">
                 <i class="bi bi-bell text-bell"></i>
                 <div class="marquee top-marquee">
@@ -131,7 +131,7 @@
                     </div>
                   </div>
                 </div>
-                <i class="bi bi-x-circle-fill text-white mobile-open"></i>
+                <i class="bi bi-x-circle-fill text-white mobile-open mobile-marquee-close"></i>
               </div>
             </div>
             <!-- 手機的漢堡icon -->
@@ -399,7 +399,7 @@
     </div>
 
     <!-- 黃金大banner -->
-    <div class="swiper mySwiper mt-md-3 mt-2">
+    <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/banner01.png"></div>
         <div class="swiper-slide"><img src="images/banner02.png"></div>
@@ -411,7 +411,7 @@
         <div class="swiper-slide"><img src="images/banner08.png"></div>
         <div class="swiper-slide"><img src="images/banner09.png"></div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination mySwiper-pagination"></div>
     </div>
     <!-- <div class="center">
       <div class="imgBanner"><img src="images/banner01.png"></div>
@@ -514,6 +514,9 @@
                 </div>
               </div>
               <div class="swiper-pagination2"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev mySwiper2-prev"></div>
+              <div class="swiper-button-next mySwiper2-next"></div>
             </div>
         </main>
       </div>
