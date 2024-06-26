@@ -44,7 +44,7 @@ $(function() {
 
   // 合作店家按鈕
   var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 3,
+    slidesPerView: 2,
     grid: {
       rows: 2,
     },
@@ -58,6 +58,15 @@ $(function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      480: {   
+        slidesPerView: 3,
+        centeredSlides: false,
+        grid: {
+          rows: 2,
+        },
+      },
+    }
   });
 
 

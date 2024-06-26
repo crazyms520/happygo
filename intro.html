@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+
+    <title>HappyGo</title>
+
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+
+    <!-- 共用外部 css 檔案 -->  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- 共用外部 font 檔案 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap.bundle.min.js"></script> 
+    <script language="javascript" type="text/javascript" src="js/public.js"></script>
+  </head>
+  <body>
+    
+    <!-- header -->
+    <header>
+      <!-- top nav -->
+      <div class="topNav mobile-close-m">
+        <div class="mainBox">
+          <div class="row mx-auto justify-content-between">
+            <div class="col-auto">
+              <label class="change">
+                <input type="checkbox">
+                <span class="change_label change_label-on">個人</span>
+                <span class="change_slider"></span>
+                <span class="change_label change_label-off">企業</span>
+              </label> 
+            </div>
+            <div class="col-auto">
+              <div class="d-flex">
+                <a class="linktop-p me-3"><i class="icon-gift align-baseline me-2"></i><span>關於快樂購</span></a>
+                <a class="linktop-b"><i class="icon-phone align-baseline me-2"></i><span>下載APP</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header logo -->
+      <div class="bg-white">
+        <div class="fullBox py-lg-2 py-0">
+          <div class="row mx-auto justify-content-between align-items-center">
+            <!-- 跑馬燈 -->
+            <div class="marquee-wrapper col-lg-4 col-12 px-lg-3 px-0">
+              <div class="d-flex bg-bell justify-content-lg-start justify-content-around px-lg-0 px-3">
+                <i class="bi bi-bell text-bell"></i>
+                <div class="marquee top-marquee">
+                  <div class="marquee-slide">
+                    <div class="inner">
+                      <a href='https://www.google.com' target="_blank">
+                        01.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        02.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                      <a href='https://www.google.com' target="_blank">
+                        03.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        04.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        05.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        06.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        07.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        08.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        09.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                  <div class="marquee-slide">
+                    <div class="inner">
+                     <a href='https://www.google.com' target="_blank">
+                        10.下載HAPPY GO App綁定發票載具得200點咖啡美食、超商購物金免費兌換！
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <i class="bi bi-x-circle-fill text-white mobile-open mobile-marquee-close"></i>
+              </div>
+            </div>
+            <!-- 手機的漢堡icon -->
+            <div class="col-3 mobile-open-m">
+              <div class="d-flex justify-content-start">
+                <i class="bi bi-list fs-4 text-purple" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
+              </div>
+            </div>
+            <!-- logo -->
+            <div class="col-lg-4 col-6 px-0 py-lg-0 py-1"><img src="images/logo.svg" class="headerLogo img-fluid"></div>
+            <div class="col-lg-4 col-3 d-flex justify-content-end  align-items-center">              
+              <button type="button" class="btn-search" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="mobile-close">搜尋</span>
+              </button>
+              <a class="login-a" href="login.html"><i class="bi bi-person-fill me-1 fs-5"></i><span class="mobile-close">登入</span></a>
+              <!-- <button class="login-a"><i class="bi bi-person-fill me-1 fs-5"></i><span>登入</span></button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 手機漢堡選單 展開 -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header bg-mainColor-mobile">
+          <label class="change">
+            <input type="checkbox">
+            <span class="change_label change_label-on">個人</span>
+            <span class="change_slider"></span>
+            <span class="change_label change_label-off">企業</span>
+          </label>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <div class="row mx-auto">
+            <div class="col-6 py-2">
+              <a class="linktop-p me-3"><i class="icon-gift align-baseline me-2"></i><span>關於快樂購</span></a>
+            </div>
+            <div class="col-6 py-2 border-start">
+              <a class="linktop-b"><i class="icon-phone align-baseline me-2"></i><span>下載APP</span></a>
+            </div>
+            <div class="col-12 py-3 ps-4 text-start border-top border-bottom">
+              <a href="index.html" class="linktop-p fw-normal">回首頁</a>
+            </div>
+          </div>
+
+          <!-- 選單 -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button nav-m" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav01" aria-expanded="true" aria-controls="mobileNav01">
+                  點數使用
+                </button>
+              </h2>
+              <div id="mobileNav01" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">線上兌點</a>
+                 <a class="navLink-m">線上轉點</a>
+                 <a class="navLink-m">登錄點數</a>
+                 <a class="navLink-m">點數轉贈</a>
+                 <a class="navLink-m">愛心捐贈</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav02" aria-expanded="false" aria-controls="mobileNav02">
+                  最新優惠
+                </button>
+              </h2>
+              <div id="mobileNav02" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">快速累點</a>
+                 <a class="navLink-m">兌點優惠</a>
+                 <a class="navLink-m">線上購物</a>
+                 <a class="navLink-m">商圈活動</a>
+                 <a class="navLink-m">金融支付</a>
+                 <a class="navLink-m">APP獨享</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav03" aria-expanded="false" aria-controls="mobileNav03">
+                  數位服務
+                </button>
+              </h2>
+              <div id="mobileNav03" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m" target="_blank">購賺點</a>
+                 <a class="navLink-m" target="_blank">HAPPY GO Pay</a>
+                 <a class="navLink-m" target="_blank">iMoney</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav04" aria-expanded="false" aria-controls="mobileNav04">
+                  卡友福利
+                </button>
+              </h2>
+              <div id="mobileNav04" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m" target="_blank">會員分級訂閱制</a>
+                 <a class="navLink-m" target="_blank">週二會員日</a>
+                 <a class="navLink-m" target="_blank">發票活動</a>
+                 <a class="navLink-m" target="_blank">累積型活動</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav05" aria-expanded="false" aria-controls="mobileNav05">
+                  會員中心
+                </button>
+              </h2>
+              <div id="mobileNav05" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">點數及交易明細查詢</a>
+                 <a class="navLink-m">個人資料維護</a>
+                 <a class="navLink-m">卡友優惠資訊設定</a>
+                 <a class="navLink-m">變更密碼</a>
+                 <a class="navLink-m">電子發票</a>
+                 <a class="navLink-m">得獎公告</a>
+                 <a class="navLink-m" href="login.html">會員登入頁</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button nav-m collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav06" aria-expanded="false" aria-controls="mobileNav06">
+                  客服中心
+                </button>
+              </h2>
+              <div id="mobileNav06" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 <a class="navLink-m">答客問</a>
+                 <a class="navLink-m">線上留言</a>
+                 <a class="navLink-m">聯絡客服</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 社群 -->
+          <div class="pt-4">
+            <a class="pe-2" href="https://www.facebook.com/happygocard" target="_blank">
+              <img src="images/icon-fb.svg" class="img-fluid">
+            </a>
+            <a class="pe-2" href="https://www.instagram.com/happygo_tw/" target="_blank">
+              <img src="images/icon-ig.svg" class="img-fluid">
+            </a>
+            <a class="pe-2" href="https://page.line.me/sst6238v?oat__id=2080208&openQrModal=true" target="_blank">
+              <img src="images/icon-line.svg" class="img-fluid">
+            </a>
+            <a class="pe-2" href="https://www.youtube.com/channel/UC4FjWjl45OspGI1fOZgmfWg" target="_blank">
+              <img src="images/icon-youtube.svg" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 網頁選單 -->
+      <div class="bg-mainColor-mobile">
+        <div class="fullBox">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="true">點數使用</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">最新優惠</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">數位服務</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="creditCard-tab" data-bs-toggle="tab" data-bs-target="#creditCard" type="button" role="tab" aria-controls="creditCard" aria-selected="false">卡友福利</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="member-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="member" aria-selected="false">會員中心</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 網頁選單-次選單 -->
+      <div class="tab-content">
+        <!-- 點數使用 -->
+        <div class="tab-pane position-relative" id="points" role="tabpanel" aria-labelledby="points-tab">
+          <div class="d-flex navBox">
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">線上兌點</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">線上轉點</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">登錄點數</a></li>
+            </ul>
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">點數轉移</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">愛心捐贈</a></li>
+            </ul>
+          </div>
+          <picture>
+            <source srcset="images/nav-bg01-m.png" media="(max-width: 767px)">
+            <img src="images/nav-bg01.png" alt="">
+          </picture>
+        </div>
+        <!-- 最新優惠 -->
+        <div class="tab-pane position-relative" id="news" role="tabpanel" aria-labelledby="news-tab">
+          <div class="d-flex navBox">
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">兌點優惠</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">線上購物</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">商圈活動</a></li>
+            </ul>
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">金融支付</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">APP獨享</a></li>
+            </ul>
+          </div>
+          <picture>
+            <source srcset="images/nav-bg02-m.png" media="(max-width: 767px)">
+            <img src="images/nav-bg02.png" alt="">
+          </picture>
+        </div>
+        <!-- 數位服務 -->
+        <div class="tab-pane position-relative" id="services" role="tabpanel" aria-labelledby="services-tab">
+          <div class="d-flex navBox">
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-3"><a class="shadow-sm">購賺點</a></li>
+              <li class="col-md-auto col-5"><a class="shadow-sm">HAPPY GO Pay</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">iMoney</a></li>
+            </ul>
+            <!-- <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">點數轉移</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">愛心捐贈</a></li>
+            </ul> -->
+          </div>
+          <picture>
+            <source srcset="images/nav-bg03-m.png" media="(max-width: 767px)">
+            <img src="images/nav-bg03.png" alt="">
+          </picture>
+        </div>
+        <!-- 卡友福利 -->
+        <div class="tab-pane position-relative" id="creditCard" role="tabpanel" aria-labelledby="creditCard-tab">
+          <div class="d-flex navBox">
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">會員分級訂閱</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">週二會員日</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">發票活動</a></li>
+            </ul>
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">累積型活動</a></li>
+              <!-- <li class="col-md-auto col-4"><a class="shadow-sm">愛心捐贈</a></li> -->
+            </ul>
+          </div>
+          <picture>
+            <source srcset="images/nav-bg04-m.png" media="(max-width: 767px)">
+            <img src="images/nav-bg04.png" alt="">
+          </picture>
+        </div>
+        <!-- 會員中心 -->
+        <div class="tab-pane position-relative" id="member" role="tabpanel" aria-labelledby="member-tab">
+          <div class="d-flex navBox">
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm">點數交易查詢</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">個人資料維護</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">卡友優惠設定</a></li>
+            </ul>
+            <ul class="mainNav-ul">
+              <li class="col-md-auto col-4"><a class="shadow-sm" href="login.html">會員登入</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">電子發票</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">得獎公告</a></li>
+            </ul>
+          </div>
+          <picture>
+            <source srcset="images/nav-bg05-m.png" media="(max-width: 767px)">
+            <img src="images/nav-bg05.png" alt="">
+          </picture>
+        </div>
+      </div>
+    </header>
+
+    <!-- 單元大Banner -->
+    <div class="position-relative">
+      <div class="d-flex navBox boxNot-50">
+        <div class="col-md-6 col-2"></div>
+        <div class="col-md-5 col-9 text-md-center text-end">
+          <p class="f44-b-white lh-1">快樂購卡友權益須知</p>
+          <p class="f32-white">Rights and Resources</p>
+        </div>
+        <div class="col-md-1 col-1"></div>
+      </div>
+      <picture>
+        <source srcset="images/info-bg-m.png" media="(max-width: 767px)">
+        <img src="images/info-bg.png" alt="">
+      </picture>
+    </div>
+
+    <!-- search光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row lightBox mb-5">
+              <div class="col-12 mb-3">
+                <span class="f32-b-main me-2 lh25">SEARCH</span>
+                <span class="f26-main">搜尋</span>
+              </div>
+              <div class="col-12 searchBox">
+                <div class="input-group">
+                   <button class="btn-input-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">特約商店</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">特約商店</a></li>
+                      <li><a class="dropdown-item" href="#">熱門活動</a></li>
+                    </ul>
+                  <input type="text" class="form-control btn-input-noBorder" placeholder="請輸入查詢關鍵字">
+                  <button type="button" class="btn-input-search"><img src="images/icon-search-purple.svg"></button>
+                </div>
+              </div>
+              <div class="col-12 my-2">
+                <span class="f13-black">熱門：</span>
+                <a class="link-orange13">母親節優惠</a>
+                <a class="link-orange13">限時快閃</a>
+                <a class="link-orange13">SOGO</a>
+                <a class="link-orange13">聯名</a>
+                <a class="link-orange13">登入禮</a>
+                <a class="link-orange13">會員日</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid px-0">
+      <div class="bgBox">
+        <main class="mainBox my-md-5 my-4 px-2">  
+            <div class="whiteBox bg-linear-orange shadow p-xl-5 p-4 mb-md-4 mb-0">
+              <div class="row justify-content-center">
+                <div class="col-11 borderB-purple pb-2 text-start mb-5">
+                  <span class="f32-b-black text-purple">快樂購卡友權益須知</span>
+                </div>
+
+                <div class="col-md-9 col-12 borderB-purple px-0 mb-5">
+                  <p class="f26-main text-purple text-start">「快樂購卡友權益須知」包含以下服務辦法與條款</p>
+                </div>
+
+                <div class="col-md-9 col-12 mb-5">
+                  <p class="f18-b-main text-purple text-start mb-3">快樂購聯合集點卡服務辦法</p>
+                  <p class="square16-b-black">快樂購聯合集點卡服務辦法</p>
+                  <p class="line16-black">快樂購卡卡友使用快樂購卡網站及HAPPY GO App約定條款</p>
+                  <p class="line16-black mb-2">「HAPPY GO」 App 服務條款</p>
+                  <p class="square16-b-black">HAPPY GO Pay行動支付服務條款與個人資料保護之法定告知事項</p>
+                </div>
+
+                <div class="col-md-9 col-12 borderB-purple px-0 mb-5">
+                  <p class="f26-main text-purple text-start">快樂購聯合集點卡服務辦法</p>
+                </div>
+
+                <div class="col-md-9 col-12">
+                  <p class="f18-b-main text-purple text-start mb-3">申請人同意 ：</p>
+
+                  <ul class="info-ul-num">
+                    <!-- 01 -->
+                    <li>
+                      加入快樂購聯合集點卡且取得快樂購聯合集點卡實體卡或虛擬卡(以下簡稱本卡)可享有鼎鼎聯合行銷(股)公司(以下簡稱鼎鼎)、各合作特約商(特約商名單將會不定期於快樂購卡網站更新並公告，詳見快樂購卡網<a href="https://www.happygocar
+d.com.tw" target="_blank">www.happygocar
+d.com.tw</a>，以下同)贈送申請人之快樂購卡點數(以下簡稱點數)，以累積點數兌換鼎鼎或各合作特約商提供之優惠或贈品，亦可享有鼎鼎暨各合作特約商提供鼎鼎、各合作特約商、各合作夥伴之行銷優惠等服務。
+                    </li>
+                    <!-- 02 -->
+                    <li>
+                      申請人須於快樂購聯合集點卡【申請書】或快樂購卡網站及特約商網站線上填寫基本個人資料向鼎鼎提出申請，經鼎鼎或指定合作特約商完成相關實體卡或虛擬卡發卡作業後成為快樂購卡友（以下簡稱卡友）並取得本卡。為確保個人權益，申請人應填寫本人正確資料，若有變動並請盡速更新，藉以維持系統紀錄資料之正確性。申請人需出示或提供相關身分證件以供驗證且不得冒用別人的身分進行申請，否則需自負相關民刑事法律責任。除鼎鼎系統已留存卡友先前資料且無更新必要以外，鼎鼎將以本次申請書所記載為記錄依據。鼎鼎將以系統紀錄之地址、行動電話或電子郵件、帳號等資料，不定期發送訊息、電子郵件，進行卡友累兌點活動及優惠資訊，為確保您的權益，請務必提供並維持資料正確性。如果您為既有快樂購卡友，本次未完整填寫之個人基本資料欄位，鼎鼎將以您之前留存之個人基本資料為記錄依據。卡友得自由選擇提供個人資料，惟若其提供之資料不足、有誤或經判斷為虛偽不實時，鼎鼎除將無法提供完整之服務外，亦將可能不予贈點，或以逕行停卡或無法成為本卡卡友之方式處理。
+                    </li>
+                    <!-- 03 -->
+                    <li>
+                      鼎鼎、鼎鼎委外服務廠商得於快樂購聯合集點卡營運期間，於快樂購聯合集點卡營運地區範圍內，於「○四○ 行銷業務（包含金控共同行銷業務）」、「○五二 法人或團體對股東、會員(含股東、會員指派之代表)、董事、監察人、理事、監事或其他成員名冊之內部管理」、「○六三 非公務機關依法定義務所進行個人資料之蒐集處理及利用」、「○六九 契約、類似契約或其他法律關係事務」、「○七七 訂位、住宿登記與購票業務」、「○八一 個人資料之合法交易業務」、「○九○ 消費者、客戶管理與服務」、「一二七 募款（包含公益勸募）」、「一三六 資（通）訊資料庫管理」、「一四八 網路購物及其他電子商務服務」、「一五二 廣告和商業行為管理」、「一五七 調查、統計與研究分析」、「一七九 其他財政服務」、「一八一 其他經營合於營業登記項目或組織章程所定之業務」、「一八二 其他諮詢與顧問服務」等合理關連之特定目的範圍內，以統計分析、交叉比對、簡訊、活動及商品訊息推播、郵件、電子郵件、問卷、電話行銷、電話服務、抽獎等方式蒐集、國際傳輸、處理及利用包含但不限於卡友姓名、身分證字號、電話、地址、生日等基本資料及卡友之消費時間、消費明細、店點、發票號碼、卡號、快樂購卡點數及、網頁瀏覽紀錄、位址資訊或其他社會活動等生活消費相關資料，俾得履行契約義務並提供卡友各項優惠措施及行銷活動訊息，但卡友如表示不同意或要求停止對其提供前述服務時，鼎鼎、鼎鼎委外服務廠商將立即停止，且卡友之權益不會受到影響。鼎鼎得將卡友之個人資料提供予各合作廠商或特約商，作為其於前開特定目的內辦理累兌點作業、點數餘額通知、統計調查分析、交叉比對、行銷與其他服務使用，惟鼎鼎將僅於必要範圍內提供資料，且將對卡友資料為適當之個資保護。如鼎鼎擬將卡友個人資料提供予特定合作特約商進行電話行銷時，將取得卡友以簡訊、網路問卷、電話或其他方式回覆同意後，始將卡友姓名、稱謂及聯絡方式提供予該合作特約商進行電話行銷，俾以於提供卡友各項優惠措施及行銷活動訊息範圍內使用。
+                    </li>
+                    <!-- 04 -->
+                    <li>
+                      為配合財政部電子發票作業，卡友使用本卡作為電子發票載具時，表示卡友同意使用本卡作為電子發票之載具，營業人得將卡友之卡號、電子發票號碼、消費時間、消費明細、店點等發票資料，自行上傳至財政部電子發票整合服務平台，或委託鼎鼎上傳前揭資料，以求符合營業人開立發票之義務並提供卡友線上查詢發票資訊及對獎服務。卡友並同意鼎鼎得於前述營業人委託範圍內，以最近一次系統登錄卡友基本資料之聯絡資訊，作為卡友中獎訊息之通知方式。
+                    </li>
+                    <!-- 05 -->
+                    <li>
+                      卡友以簡訊、電話、網頁等方式表示同意以點數換算現金捐贈款項予鼎鼎合作團體時，鼎鼎將於交付款項予合作團體之同時，一併將同意捐贈卡友之姓名、地址、捐贈點數、換算金額提供予受捐贈之合作團體作為開立、寄發收據之用；鼎鼎均僅與政府合法立案之團體合作點數換現金捐款活動。如卡友就該次點數換現金捐款活動明示無需開立收據或卡友捐贈點數依該次活動所揭示辦法無需開立收據者，鼎鼎將不提供卡友地址予該次受捐贈之合作團體；如卡友就該次點數換現金捐款活動明示匿名捐贈者，鼎鼎將不提供卡友姓名及地址予該次受捐贈之合作團體。
+                    </li>
+                    <!-- 06 -->
+                    <li>
+                      卡友就其個人資料得向鼎鼎請求答覆查詢、提供閱覽、製給複製本，或請求補充更正、請求停止蒐集、處理、利用及刪除等權利。卡友行使前揭權利時，須由本人向鼎鼎服務中心申請，鼎鼎將於確認卡友身分及請求內容 後依作業程序規定辦理。卡友行使上述答覆查詢、提供閱覽、製給複製本權利時，鼎鼎將酌收必要成本費用。
+                    </li>
+                    <!-- 07 -->
+                    <li>
+                      卡友申請本卡後，於<a href="https://www.happygocar
+d.com.tw" target="_blank">快樂購卡網站www.happygocard.com.tw</a>輸入經驗證之手機門號及密碼後即可使用快樂購卡網站提供之功能。相關使用約定條款詳見快樂購網站公告。
+                    </li>
+                    <!-- 08 -->
+                    <li>
+                      經鼎鼎驗證並完成綁定手續之載具，視為本卡。
+                    </li>
+                    <!-- 09 -->
+                    <li>
+                      卡友於行使卡友所屬權利時，應出示本卡，必要時鼎鼎或各合作特約商得要求出示卡友本人身分證等身分證明文件，以確認權益歸屬
+                    </li>
+                    <!-- 10 -->
+                    <li>
+                      卡友使用第三方所提供之App服務將本卡卡號或條碼置入時，應注意其來源與安全性，並應自行負責並承擔使用該第三方App服務所生之風險。
+                    </li>
+                    
+                    <!-- 11 -->
+                    <li>
+                      卡友於申請書提供之基本資料，除依法律規定方式處理外，將於快樂購聯合集點卡營運終止後刪除。
+                    </li>
+                    <!-- 12 -->
+                    <li>
+                      卡友如就已消費並贈送點數之商品或服務向原合作特約商退換貨時，合作特約商將扣回該商品贈送點數，如點數不足扣回者，卡友需繳還點數處理成本費用(計算公式：不足之點數*NT$ 0.4)後始得進行退換貨。
+                    </li>
+                    <!-- 13 -->
+                    <li>
+                      本卡累計點數可兌換之贈品內容將不定期更新，卡友不得要求兌換現金，或兌換非贈品兌換期限內之贈品。點數兌換作業，將依各合作特約商公告為準。
+                    </li>
+                    <!-- 14 -->
+                    <li>
+                      除另有約定外，鼎鼎與各合作特約商間並無合夥、經銷、代理或保證人關係，兌換贈品如由各合作特約商直接提供予卡友，其寄送、使用、保證、瑕疵擔保等問題，均由各合作特約商或活動主辦單位提供並負責之。鼎鼎提供之贈品兌換及活動內容依<a href="https://www.happygocar
+d.com.tw" target="_blank">快樂購卡網站www.happygocard.com.tw</a>公告為依據。
+                    </li>
+                    <!-- 15 -->
+                    <li>
+                      卡友當年度獲贈之一般點數，可使用至次年12月31日；其他活動加贈之限時點數使用期限依各活動內容公告為準。新增累積之點數將於登錄後48小時內轉入卡友帳戶，且兌換贈品所需點數將以到期日在前者優先扣除，到期日相同時以限時點數優先扣除。
+                    </li>
+                    <!-- 16 -->
+                    <li>
+                      為維護卡友權益，如系統產生點數登錄異常情況時，鼎鼎將暫停該卡異常狀況之點數登錄及兌換功能；異常狀況解除時，鼎鼎隨即恢復卡友點數登錄、兌換功能或調整該卡點數，鼎鼎亦可能於必要時另以換、補卡之方式處理。
+                    </li>
+                    <!-- 17 -->
+                    <li>
+                      卡友應妥善保管所持有之本卡，若因遺失或被竊等情形造成點數或相關權益損失應自行負責，鼎鼎不負賠償責任。
+                    </li>
+                    <!-- 18 -->
+                    <li>
+                      持卡人持有多張本卡者，每張卡片均可累點及兌點，點數將累積於同一身分證帳號，不得重複計算。如因遺失實體卡而申請補發時，鼎鼎將酌收工本費50元。
+                    </li>
+                    <!-- 19 -->
+                    <li>
+                      卡友若有侵害他人權益或違反法律、違反鼎鼎各項活動辦法、使用偽冒或非法取得的資料進行鼎鼎各項服務、妨礙鼎鼎各項活動服務營運之行為、意圖入侵或破壞鼎鼎各項服務及系統，或有鼎鼎認定之其他不當行為者，鼎鼎有權立即停止卡友繼續使用快樂購卡或終止卡友會員資格，並採取適當法律行動。
+                    </li>
+                    <!-- 20 -->
+                    <li>
+                      鼎鼎保有本卡之申請、停用、修改或終止各項優惠服務之權利。鼎鼎將不定期更新或變更相關資料，有關本卡之服務辦法、相關權益及使用說明、標識符號、合作特約商、活動內容等相關資訊以<a href="https://www.happygocar
+d.com.tw" target="_blank">快樂購卡網站www.happygocard
+.com.tw</a>公告者為準。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </main>
+      </div>
+    </div>
+    
+    <main class="mainBox container-fluid mb-5">
+      <!-- 客服中心 -->
+      <div class="whiteBox shadow p-xl-5 p-4 mb-md-4 mb-0">
+        <div class="row">
+          <div class="col-12 text-lg-start text-center mb-4">
+            <span class="f32-b-main me-2 d-lg-inline-block d-block lh25">CUSTOMER SERVICE</span>
+            <span class="f26-main">客服中心</span>
+          </div>
+          <div class="col-lg-4 col-12 border-r-b mb-lg-0 mb-2">
+            <div class="row mb-lg-0 mb-3">
+              <div class="col-lg-4 col-3"><img src="images/icon-phone.svg"></div>
+              <div class="col-lg-8 col-9 ps-0 text-start">
+                <a href="" class="countLink">聯繫客服</a>
+                <p class="f16-gray mb-0">週一至週五09:00~18:00</p>
+                <p class="f16-gray mb-0 mobile-close">非服務時間請使用線上留言功能</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 border-r-b my-lg-0 my-2">
+            <div class="row mb-lg-0 mb-3">
+              <div class="col-lg-4 col-3"><img src="images/icon-qa.svg"></div>
+              <div class="col-lg-8 col-9 ps-0 text-start">
+                <a href="" class="countLink">常見問答</a>
+                <p class="f16-gray mb-0">匯集常見問題的解決方案，提供用戶排解疑難雜症。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 mt-lg-0 mt-2">
+            <div class="row mb-lg-0 mb-3">
+              <div class="col-lg-4 col-3"><img src="images/icon-mail.svg"></div>
+              <div class="col-lg-8 col-9 ps-0 text-start">
+                <a href="" class="countLink">線上留言</a>
+                <p class="f16-gray mb-0">如無法解決您的疑問，請與我們連絡！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 關注我們 -->
+      <div class="whiteBox shadow p-5 mobile-close">
+        <div class="row">
+          <div class="col-12 text-lg-start text-center mb-4">
+            <span class="f32-b-main me-2 lh25">FOLLOWS US</span>
+            <span class="f26-main">關注我們</span>
+          </div>
+          <div class="col-xl-4 col-5 border-r-b">
+            <div class="row  align-items-center">
+              <div class="col-4"><span class="f20-b-black me-2">官方社群</span></div>
+              <div class="col-8 ps-0 text-start">
+                <a href="https://www.facebook.com/happygocard" target="_blank">
+                  <img src="images/icon-fb.svg" class="img-fluid">
+                </a>
+                <a href="https://www.instagram.com/happygo_tw/" target="_blank">
+                  <img src="images/icon-ig.svg" class="img-fluid">
+                </a>
+                <a href="https://page.line.me/sst6238v?oat__id=2080208&openQrModal=true" target="_blank">
+                  <img src="images/icon-line.svg" class="img-fluid">
+                </a>
+                <a href="https://www.youtube.com/channel/UC4FjWjl45OspGI1fOZgmfWg" target="_blank">
+                  <img src="images/icon-youtube.svg" class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-7 border-r-b">
+            <div class="row align-items-center">
+              <div class="col-xl-2 col-3"><span class="f20-b-black me-2">下載APP</span></div>
+              <div class="col-xl-10 col-9 ps-0 text-start">
+                <a><img src="images/appstore.svg" class="img-fluid me-2"></a>
+                <a><img src="images/googleplay.svg" class="img-fluid"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-nav">
+        <div class="mainBox">
+          <!-- mobile show start -->
+          <div class="mobile-open ">
+            <div class="row d-flex justify-content-around">
+              <div class="col-8 d-flex justify-content-between"></a>
+                <a href="https://www.facebook.com/happygocard" target="_blank">
+                  <img src="images/icon-fb.svg" class="img-fluid">
+                </a>
+                <a href="https://www.instagram.com/happygo_tw/" target="_blank">
+                  <img src="images/icon-ig.svg" class="img-fluid">
+                </a>
+                <a href="https://page.line.me/sst6238v?oat__id=2080208&openQrModal=true" target="_blank">
+                  <img src="images/icon-line.svg" class="img-fluid">
+                </a>
+                <a href="https://www.youtube.com/channel/UC4FjWjl45OspGI1fOZgmfWg" target="_blank">
+                  <img src="images/icon-youtube.svg" class="img-fluid">
+                </a>
+              </div>
+              <div class="col-12 d-flex align-items-center justify-content-center mt-3 px-0">
+                <span class="f16-b-main me-2">下載APP</span>
+                <a><img src="images/appstore.svg" class="img-fluid me-2"></a>
+                <a><img src="images/googleplay.svg" class="img-fluid"></a>
+              </div>
+            </div>
+          </div>
+          <!-- mobile show end -->
+          <!-- web -->
+          <div class="row mx-auto py-3 mobile-close">
+            <!-- 01 -->
+            <div class="col-2 px-0">
+              <p class="f18-b-main text-start pb-2">點數使用</p>
+              <ul class="footer-ul">
+                <li><a href="https://www.google.com.tw" target="_blank">線上兌點</a></li>
+                <li><a href="https://www.google.com.tw" target="_blank">線上轉點</a></li>
+                <li><a>登錄點數劵</a></li>
+                <li><a>點數轉移</a></li>
+                <li><a>愛心捐點</a></li>
+              </ul>
+            </div>
+            <!-- 02 --> 
+            <div class="col-2 px-0">
+              <p class="f18-b-main text-start pb-2">最新優惠</p>
+              <ul class="footer-ul">
+                <li><a>快速累點</a></li>
+                <li><a>兌換優惠</a></li>
+                <li><a>線上購物 </a></li>
+                <li><a>商圈活動</a></li>
+                <li><a>金融支付</a></li>
+                <li><a>APP獨享</a></li>
+              </ul>
+            </div>
+            <!-- 03 -->
+            <div class="col-2 px-0">
+              <p class="f18-b-main text-start pb-2">數位服務</p>
+              <ul class="footer-ul">
+                <li><a>購賺點</a></li>
+                <li><a>iMoney</a></li>
+                <li><a>Happy GO Pay</a></li>
+              </ul>
+            </div>
+            <!-- 04 -->
+            <div class="col-2 px-0">
+              <p class="f18-b-main text-start pb-2">卡友福利</p>
+              <ul class="footer-ul">
+                <li><a>會員分級與福利</a></li>
+                <li><a>發票活動</a></li>
+                <li><a>週二會員日</a></li>
+                <li><a>領神劵</a></li>
+              </ul>
+            </div>
+            <!-- 05 -->
+            <div class="col-2 px-0">
+              <p class="f18-b-main text-start pb-2">會員中心</p>
+              <ul class="footer-ul">
+                <li><a>點數及交易明細查詢</a></li>
+                <li><a>個人資料維護</a></li>
+                <li><a>變更密碼</a></li>
+                <li><a>電子發票</a></li>
+                <li><a>得獎公告</a></li>
+                <li><a>好康訂閱</a></li>
+              </ul>
+            </div>
+            <!-- 06 -->
+            <div class="col-2 px-0">
+              <p class="text-start pb-2"><a href="" class="footer-a">特約商資訊服務網站</a></p>
+              <p class="text-start pb-2"><a href="" class="footer-a">智慧財產權保護聲明</a></p>
+              <p class="text-start pb-2"><a href="" class="footer-a">友好夥伴</a></p>
+              <p class="text-start pb-2"><a href="intro.html" class="footer-a">隱私權政策</a></p>
+              <p class="text-start pb-2"><a href="" class="footer-a">卡友權益須知</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-mainBlack py-3">
+        <div class="mainBox d-flex justify-content-between align-items-center flex-xl-row flex-column">
+          <!-- mobile show start -->
+          <div class="mobile-open">
+            <a href="" class="footer-a-m">特約商資訊服務網站</a>
+            <a href="" class="footer-a-m">智慧財產權保護聲明</a>
+          </div>
+          <div class="mobile-open">
+            <a href="" class="footer-a-m">友好夥伴</a>
+            <a href="intro.html" class="footer-a-m">隱私權政策</a>
+            <a href="" class="footer-a-m">卡友權益須知</a>
+          </div>
+          <!-- mobile show end -->
+
+          <div class="my-xl-0 my-4"><img src="images/footer-logo.svg"></div>
+          <span class="f13-gray">鼎鼎聯合行銷(股)公司版權所有 Copyright 2024 All Right Reserved by DDIM</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 共用外部 js 檔案 -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+  </body>
+</html>
+

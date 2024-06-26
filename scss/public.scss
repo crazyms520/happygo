@@ -102,13 +102,17 @@ img {
 
 
 
-// 背景色、文字色、link
+// 背景色、文字色、link、線條
 .text-orange {color: $mainOrange;}
 .text-purple {color: $mainColor !important;}
 .text-white {color:white !important;}
 
+.borderB-purple {
+  border-bottom: 1px solid $mainColor;
+}
+
 .bg-linear-orange {
-  background: linear-gradient(to bottom,  #ffffff 0%,#fffaf6 100%) !important; 
+  background: linear-gradient(to bottom,  #ffffff 80%, #fffaf6 100%) !important; 
 }
 
 .bg-bell {
@@ -546,6 +550,16 @@ img {
   }
 }
 
+.f44-b-white {
+  color: white;
+  font-weight: 500;
+  font-size: 2.8rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.8rem;
+  }
+}
+
 .f16-b-main {
   color: $mainColor;
   font-weight: 500;
@@ -579,6 +593,91 @@ img {
 
   @include media-breakpoint-down(lg) {
     font-size: 1.25rem;
+  }
+}
+
+.f32-white {
+  color: white;
+  font-weight: 300;
+  font-size: 2.2rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+}
+
+// 隱私條款使用
+.f16-black {
+  text-align: left;
+  color: $mainBlack;
+  font-weight: 300;
+  font-size: 1rem;
+
+  > a {
+    color: $mainOrange;
+
+    &:hover, &:active {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.square16-black {
+  text-align: left;
+  color: $mainBlack;
+  font-weight: 300;
+  font-size: 1rem;
+
+  &:before {
+    display: inline-block;
+    content: '■';
+    margin-right: 5px;
+  }
+}
+.square16-b-black {
+  text-align: left;
+  color: $mainBlack;
+  font-weight: 500;
+  font-size: 1rem;
+
+  &:before {
+    display: inline-block;
+    content: '■';
+    margin-right: 5px;
+  }
+}
+.line16-black {
+  text-align: left;
+  color: $mainBlack;
+  font-weight: 300;
+  font-size: 1rem;
+
+  &:before {
+    display: inline-block;
+    color: #B5B5B6;
+    content: '－';
+    margin-right: 5px;
+  }
+}
+.info-ul-num {
+  list-style: decimal;
+  padding-left: 18px;
+
+  > li {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $mainBlack;
+    text-align: left;
+    margin-bottom: 15px;
+    line-height: 25px;
+
+    > a {
+      color: $mainOrange;
+
+      &:hover, &:active {
+        text-decoration: underline !important;
+      }
+    }
   }
 }
 
@@ -628,6 +727,12 @@ img {
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
+  }
+
+  &.boxNot-50 {
+    @include media-breakpoint-down(md) {
+      bottom: 12px;
+    }
   }
 }
 
@@ -704,6 +809,11 @@ img {
 
 
 // boostrap
+.tab-content {
+  position: absolute;
+  z-index: 1010;
+}
+
 .form-control {
   &:focus {
     box-shadow: unset !important;
@@ -993,6 +1103,16 @@ $tl: 0.6s; // transition length
 }
 
 // 合作店家
+.swiper-wrapper {
+  &.storeHeignt {
+    height:630px;
+
+    @include media-breakpoint-down(md) {
+      height:435px;
+    }
+  }
+}
+
 .swiper {
 
   &.storeBoxs {
@@ -1023,6 +1143,7 @@ $tl: 0.6s; // transition length
 .storeIconBox {
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
   align-items: center;
   justify-content: center;
   width: 300px;
@@ -1031,6 +1152,21 @@ $tl: 0.6s; // transition length
   @include border-radius(30px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   padding: 20px;
+
+  @include media-breakpoint-down(md) {
+    height: 200px;
+  }
+
+  > img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(md) {
+      max-width: 90px;
+      margin-bottom: 10px;
+    }
+  }
 
   > p {
     font-size: 1.75rem;
@@ -1042,7 +1178,29 @@ $tl: 0.6s; // transition length
   }
 }
 
+.mySwiper2-prev, .mySwiper2-next {
+  top: 46% !important;
 
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+}
+
+.mySwiper2-prev {
+  &:after {
+    color: $mainBlack !important;
+    content:'\F129' !important;
+    font-family:'bootstrap-icons' !important;
+  }
+}
+
+.mySwiper2-next {
+  &:after {
+    color: $mainBlack !important;
+    content:'\F133' !important;
+    font-family:'bootstrap-icons' !important;
+  }
+}
 
 
 
