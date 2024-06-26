@@ -42,6 +42,7 @@ $(function() {
     }
   });
 
+  // 合作店家按鈕
   var swiper = new Swiper(".mySwiper2", {
     slidesPerView: 3,
     grid: {
@@ -58,34 +59,7 @@ $(function() {
       prevEl: '.swiper-button-prev',
     },
   });
-	// $('.center').slick({
-	// 	// autoplay: true,
-  // 	// autoplaySpeed: 2000,
-	//   centerMode: true,
-	//   centerPadding: '0',
-	//   slidesToShow: 3,
-  // 	slidesToScroll: 1,
-	//   responsive: [
-	//     {
-	//       breakpoint: 768,
-	//       settings: {
-	//         arrows: false,
-	//         centerMode: true,
-	//         centerPadding: '40px',
-	//         slidesToShow: 1
-	//       }
-	//     },
-	//     {
-	//       breakpoint: 480,
-	//       settings: {
-	//         arrows: false,
-	//         centerMode: true,
-	//         centerPadding: '40px',
-	//         slidesToShow: 1
-	//       }
-	//     }
-	//   ]
-	// });
+
 
   // 跑馬燈關閉
   $('.mobile-marquee-close').on('click', function(){

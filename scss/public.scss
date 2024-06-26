@@ -107,6 +107,10 @@ img {
 .text-purple {color: $mainColor !important;}
 .text-white {color:white !important;}
 
+.bg-linear-orange {
+  background: linear-gradient(to bottom,  #ffffff 0%,#fffaf6 100%) !important; 
+}
+
 .bg-bell {
   @include media-breakpoint-down(lg) {
     padding: 5px;
@@ -324,14 +328,34 @@ img {
   margin-bottom: 0;
 
   @include media-breakpoint-down(md) {
-    display: none;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 2%;
+    padding-left: 0;
+
+    &:last-child {
+      border-bottom: 5px solid $mainColor;
+    }
   }
 
   > li {
     padding-bottom: 15px;
 
+    @include media-breakpoint-down(md) {
+      font-size: .9rem;
+      padding: 0 0.5rem 0.5rem 0.5rem;
+    }
+
     &:last-child {
       padding-bottom: 0;
+
+      @include media-breakpoint-down(md) {
+        padding-top: 0;
+        padding-bottom: 10px;
+      }
     }
     
     > a {
@@ -343,12 +367,29 @@ img {
       color: $mainColor !important;
       @include border-radius(100px);
       background-color: white;
+      text-align: left;
+
+      @include media-breakpoint-down(md) {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        padding: 0.5rem .4rem;
+        color: $mainColor !important;
+        background-color: white;
+        border: 1px solid $mainColor;
+        font-size: .8rem;
+        @include border-radius(0);
+      }
 
       &:before {
         display: inline-block;
         content: "・";
         color: $mainColor;
         padding-right: 15px;
+
+        @include media-breakpoint-down(md) {
+          padding-right: 3px;
+        }
       }
 
       &:after {
@@ -357,81 +398,25 @@ img {
         font-family: "icon";
         color: $mainColor;
         padding-left: 15px;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
 
       &:hover ,&:active {
         color: white !important;
         background-color: $mainColor;
+
+        @include media-breakpoint-down(md) {
+          padding-right: 5px;
+        }
 
         &:before {
           color: white;
         }
 
         &:after {
-          color: white;
-        }
-      }
-
-    }
-  }
-}
-
-.mainNav-ul-m {
-
-  @include media-breakpoint-down(lg) {
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
-    list-style: none;
-    margin-bottom: 2%;
-    padding-left: 0;
-    border-bottom: 5px solid $mainColor;
-  }
-
-  @include media-breakpoint-down(lg) {
-    margin-bottom: 1%;
-  }
-
-
-  > li {
-    padding:0 10px 15px 10px;
-
-    @include media-breakpoint-down(lg) {
-      padding:0 8px 8px 8px;
-    }
-   
-    > a {
-      display: inline-block;
-      text-align: left;
-      width: 100%;
-      padding: 0.5rem 1rem;
-      font-weight: 300;
-      font-size: 1rem;
-      color: $mainColor !important;
-      background-color: white;
-      border: 1px solid $mainColor;
-
-      @include media-breakpoint-down(lg) {
-        font-size: .9rem;
-        padding: 0.5rem 0.5rem;
-      }
-
-      &:before {
-        display: inline-block;
-        content: "・";
-        color: $mainColor;
-        padding-right: 15px;
-
-        @include media-breakpoint-down(lg) {
-          padding-right: 5px;
-        }
-      }
-
-      &:hover ,&:active {
-        color: white !important;
-        background-color: $mainColor;
-
-        &:before {
           color: white;
         }
       }
@@ -551,6 +536,16 @@ img {
   }
 }
 
+.f32-b-black {
+  color: black;
+  font-weight: 500;
+  font-size: 2.2rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.8rem;
+  }
+}
+
 .f16-b-main {
   color: $mainColor;
   font-weight: 500;
@@ -605,7 +600,7 @@ img {
   background-repeat: no-repeat, no-repeat;
   background-position:top left, bottom right;
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     background-position: -29px -3%, 112% bottom;
     background-size: 50%, 50%;
   }
@@ -618,10 +613,22 @@ img {
     padding:0 5px;
   }
 }
+
 .navBox {
   display: inline-block;
   width: 100%;
   max-width: 1200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }
 }
 
 .topNav {
@@ -977,7 +984,6 @@ $tl: 0.6s; // transition length
 
 .swiper-pagination-bullets {
   &.swiper-pagination-horizontal {
-    // bottom: -24px !important;
     background-color: #f8f8f8;
   }
 }
@@ -1007,10 +1013,11 @@ $tl: 0.6s; // transition length
     display: flex;
     justify-content: center;
     align-items: center;
-
-    // d
-    // border: 1px solid red;
   }
+}
+
+.swiper-pagination2 {
+  background-color: transparent !important;
 }
 
 .storeIconBox {
