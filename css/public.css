@@ -3242,11 +3242,12 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .pageNav > li.pageNav-sec.active-sec:after { content: '\f106'; color: #F08500; padding: 0 15px; }
 .pageNav > li > a { display: inline-block; width: 90%; color: #3c3a39; }
 .pageNav > li > a:hover, .pageNav > li > a:active { color: white; }
-.pageNav > li:before { display: inline-block; content: '⏺︎'; color: #270089; margin-right: 8px; }
+.pageNav > li:before { display: inline-block; content: "\f519"; font-family: bootstrap-icons !important; color: #270089; margin-right: 4px; }
 .pageNav > li:hover, .pageNav > li:active, .pageNav > li.active { cursor: pointer; color: white; background-color: #270089; border-radius: 0 10px 10px 0; }
 .pageNav > li:hover:before, .pageNav > li:active:before, .pageNav > li.active:before { color: white; }
+.pageNav > li:hover:after, .pageNav > li:active:after, .pageNav > li.active:after { color: #F08500; }
 .pageNav > li:hover > a, .pageNav > li:active > a, .pageNav > li.active > a { color: white; }
-.pageNav .pageNav-sec-box { display: inline-block; }
+.pageNav .pageNav-sec-box { display: none; }
 .pageNav .pageNav-sec-box > a { display: block; width: 100%; padding-left: 3rem; line-height: 45px; color: #3c3a39; font-weight: 300; text-align: left; font-size: .9rem; }
 .pageNav .pageNav-sec-box > a:before { display: inline-block; content: 'ㄴ'; color: #e0e0e0; padding-right: 5px; }
 .pageNav .pageNav-sec-box > a:hover, .pageNav .pageNav-sec-box > a:active, .pageNav .pageNav-sec-box > a.active-sec { color: #F08500; }

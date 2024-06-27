@@ -627,9 +627,12 @@ img {
 
     &:before {
       display: inline-block;
-      content: '⏺︎';
+      content: "\f519";
+      font-family: bootstrap-icons !important;
       color: $mainColor;
-      margin-right: 8px;
+      // 0627 8px -> 4px 不會斷行，再依畫面判斷
+      margin-right: 4px;
+      
     }
 
     &:hover, &:active, &.active {
@@ -642,6 +645,11 @@ img {
         color: white;
       }
 
+      // 0627 hover 時 箭頭顏色調整為橘色
+      &:after {
+        color: $mainOrange; 
+      }
+
       > a {
         color: white;
       }
@@ -649,7 +657,8 @@ img {
   }
 
   .pageNav-sec-box {
-    display: inline-block;
+    // 0627 預設為隱藏
+    display: none;
 
     > a {
       display: block;
