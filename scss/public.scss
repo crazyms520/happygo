@@ -83,6 +83,12 @@ img {
   }
 }
 
+.mobile-close-sm {
+  @include range-width(0, 440px) {
+    display: none !important;
+  }
+}
+
 
 // 手機版打開
 .mobile-open {
@@ -99,6 +105,12 @@ img {
   }
 }
 
+.mobile-open-sm {
+  display: none !important;
+  @include range-width(0, 440px) {
+    display: inline-block !important;
+  }
+}
 
 
 
@@ -493,6 +505,16 @@ img {
   }
 }
 
+.f18-link {
+  display: inline-block;
+  color: $mainColor;
+  font-size: 1.1rem;
+
+  &:hover, &:active {
+    text-decoration: underline !important;
+  }
+}
+
 
 
 // text
@@ -681,6 +703,17 @@ img {
   }
 }
 
+.purple-change-black {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $mainColor;
+
+  @include range-width(0, 440px) {
+    font-size: 1.2rem;
+    color: $mainBlack;
+  }
+}
+
 .lh20 {
   line-height: 20px;
 }
@@ -691,7 +724,21 @@ img {
 
 
 
+
+
 // BOX
+.box850 {
+  display: inline-block;
+  width: 100%;
+  max-width: 850px;
+}
+
+.orangeBox {
+  background-color: #fff3e8;
+  @include border-radius(20px);
+  padding: 25px;
+}
+
 .bgBox {
   display: inline-block;
   width: 100%;

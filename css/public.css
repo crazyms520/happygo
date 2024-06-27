@@ -3110,11 +3110,16 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 @media screen and (max-width: 989px) and (min-width: 0) { .mobile-close-m { display: none !important; } }
 
+@media screen and (max-width: 439px) and (min-width: 0) { .mobile-close-sm { display: none !important; } }
+
 .mobile-open { display: none !important; }
 @media screen and (max-width: 769px) and (min-width: 0) { .mobile-open { display: inline-block !important; } }
 
 .mobile-open-m { display: none !important; }
 @media screen and (max-width: 989px) and (min-width: 0) { .mobile-open-m { display: inline-block !important; } }
+
+.mobile-open-sm { display: none !important; }
+@media screen and (max-width: 439px) and (min-width: 0) { .mobile-open-sm { display: inline-block !important; } }
 
 .text-orange { color: #F08500; }
 
@@ -3211,6 +3216,9 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .btn-input-noBorder { border-left: 1px solid #270089 !important; border-right: 0 !important; border-top: 0 !important; border-bottom: 0 !important; }
 .btn-input-noBorder::placeholder { color: #b5b5b6; font-weight: 300; }
 
+.f18-link { display: inline-block; color: #270089; font-size: 1.1rem; }
+.f18-link:hover, .f18-link:active { text-decoration: underline !important; }
+
 .text-bell { color: #F08500; font-size: 1rem; padding-right: 10px; transform: rotate(-22deg); }
 @media (max-width: 991.98px) { .text-bell { padding-right: 0; color: white; } }
 
@@ -3263,9 +3271,16 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .info-ul-num > li > a { color: #F08500; }
 .info-ul-num > li > a:hover, .info-ul-num > li > a:active { text-decoration: underline !important; }
 
+.purple-change-black { font-size: 1.5rem; font-weight: 500; color: #270089; }
+@media screen and (max-width: 439px) and (min-width: 0) { .purple-change-black { font-size: 1.2rem; color: #3c3a39; } }
+
 .lh20 { line-height: 20px; }
 
 .lh25 { line-height: 25px; }
+
+.box850 { display: inline-block; width: 100%; max-width: 850px; }
+
+.orangeBox { background-color: #fff3e8; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; padding: 25px; }
 
 .bgBox { display: inline-block; width: 100%; background-image: url(../images/bgL.svg), url(../images/bgR.svg); background-repeat: no-repeat, no-repeat; background-position: top left, bottom right; }
 @media (max-width: 767.98px) { .bgBox { background-position: -29px -3%, 112% bottom; background-size: 50%, 50%; } }
