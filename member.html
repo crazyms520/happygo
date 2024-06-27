@@ -25,7 +25,7 @@
     <script language="javascript" type="text/javascript" src="js/bootstrap.bundle.min.js"></script> 
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
   </head>
-  <body>
+  <body class="bg-member">
     
     <!-- header -->
     <header>
@@ -299,7 +299,7 @@
           <!-- Nav tabs -->
           <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="true">點數使用</button>
+              <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="true">點數使用</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">最新優惠</button>
@@ -320,7 +320,7 @@
       <!-- 網頁選單-次選單 -->
       <div class="tab-content">
         <!-- 點數使用 -->
-        <div class="tab-pane position-relative active" id="points" role="tabpanel" aria-labelledby="points-tab">
+        <div class="tab-pane position-relative" id="points" role="tabpanel" aria-labelledby="points-tab">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">線上兌點</a></li>
@@ -364,8 +364,8 @@
               <li class="col-md-auto col-4"><a class="shadow-sm">iMoney</a></li>
             </ul>
             <!-- <ul class="mainNav-ul">
-              <li class="col-md-auto col-4"><a class="shadow-sm">點數轉移</a></li>
-              <li class="col-md-auto col-4"><a class="shadow-sm">愛心捐贈</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm"></a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm"></a></li>
             </ul> -->
           </div>
           <picture>
@@ -413,126 +413,29 @@
       </div>
     </header>
 
-    <!-- 撐開天地空白區 -->
-    <!-- <div class="position-relative">
-      <picture>
-        <source srcset="images/nav-bg00-m.png" media="(max-width: 767px)">
-        <img src="images/nav-bg00.png" alt="">
-      </picture>
-    </div> -->
-
-    <!-- 黃金大banner -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/banner01.png"></div>
-        <div class="swiper-slide"><img src="images/banner02.png"></div>
-        <div class="swiper-slide"><img src="images/banner03.png"></div>
-        <div class="swiper-slide"><img src="images/banner04.png"></div>
-        <div class="swiper-slide"><img src="images/banner05.png"></div>
-        <div class="swiper-slide"><img src="images/banner06.png"></div>
-        <div class="swiper-slide"><img src="images/banner07.png"></div>
-        <div class="swiper-slide"><img src="images/banner08.png"></div>
-        <div class="swiper-slide"><img src="images/banner09.png"></div>
-      </div>
-      <div class="swiper-pagination mySwiper-pagination"></div>
-    </div>
-
-    <main class="container-fluid px-0">
-      <div class="bgBox">
-        <div class="mainBox my-5">  
-            <div class="row mx-auto align-items-center mb-4">
-              <div class="col-lg-10 col-12 text-lg-start text-center">
-                <span class="f32-b-main me-2 d-lg-inline-block d-block lh25">COLLABORATE</span>
-                <span class="f26-main">合作店家</span>
-              </div>
-              <div class="col-lg-2 col-12 text-end">
-                <a class="moreLink">優惠一覽</a>
-              </div>
+    <div class="mainBox container-fluid my-md-5 my-4">  
+        <div class="whiteBox shadow pt-xl-5 pe-xl-5 pb-xl-5 pt-4 pe-4 pb-4 mb-md-4 mb-0">
+          <div class="row mx-auto justify-content-lg-between">
+            <div class="col-12 text-lg-start text-center mb-5 ps-xl-5 ps-4">
+              <span class="f32-b-main lh25">會員服務</span>
             </div>
 
-            <div class="swiper storeBoxs mySwiper2">
-              <div class="swiper-wrapper storeHeignt">
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon01.svg" class="img-fluid">
-                    <p>百貨公司</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon02.svg" class="img-fluid">
-                    <p>美食餐廳</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon03.svg" class="img-fluid">
-                    <p>生活必備</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon04.svg" class="img-fluid">
-                    <p>超市量販</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon05.svg" class="img-fluid">
-                    <p>休閒娛樂</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon06.svg" class="img-fluid">
-                    <p>旅遊住宿</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon07.svg" class="img-fluid">
-                    <p>銀行金融</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon08.svg" class="img-fluid">
-                    <p>便利商店</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon09.svg" class="img-fluid">
-                    <p>交通停車</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon10.svg" class="img-fluid">
-                    <p>跨國合作</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon11.svg" class="img-fluid">
-                    <p>線上購物</p>
-                  </a>
-                </div>
-                <div class="swiper-slide store">
-                  <a class="storeIconBox">
-                    <img src="images/store-icon12.svg" class="img-fluid">
-                    <p>更多推薦</p>
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-pagination2 mt-3"></div>
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev mySwiper2-prev"></div>
-              <div class="swiper-button-next mySwiper2-next"></div>
+            <div class="col-3 redborder ps-0">
+              <ul class="pageNav">
+                <li><a href=''>點數及交易明細查詢</a></li>
+                <li><a href=''>個人資料維護</a></li>
+                <li><a href=''>變更密碼</a></li>
+                <li><a href=''>電子發票</a></li>
+                <li><a href=''>個人優惠通知設定</a></li>
+                <li>得獎公告
+                <div class="pageNav-sec"></div>
+              </ul>
+            </div>
+            <div class="col-9 redborder">
+              8
             </div>
         </div>
-      </div>
-    </main>
+    </div>
     
     <div class="mainBox container-fluid mb-5">
       <!-- 客服中心 -->
@@ -702,7 +605,7 @@
               <p class="text-start pb-2"><a href="" class="footer-a">特約商資訊服務網站</a></p>
               <p class="text-start pb-2"><a href="" class="footer-a">智慧財產權保護聲明</a></p>
               <p class="text-start pb-2"><a href="" class="footer-a">友好夥伴</a></p>
-              <p class="text-start pb-2"><a href="intro.html" class="footer-a">隱私權政策</a></p>
+              <p class="text-start pb-2"><a href="" class="footer-a">隱私權政策</a></p>
               <p class="text-start pb-2"><a href="" class="footer-a">卡友權益須知</a></p>
             </div>
           </div>
@@ -718,7 +621,7 @@
           </div>
           <div class="mobile-open">
             <a href="" class="footer-a-m">友好夥伴</a>
-            <a href="intro.html" class="footer-a-m">隱私權政策</a>
+            <a href="" class="footer-a-m">隱私權政策</a>
             <a href="" class="footer-a-m">卡友權益須知</a>
           </div>
           <!-- mobile show end -->
@@ -767,6 +670,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- 共用外部 js 檔案 -->
     <!-- Swiper JS -->
