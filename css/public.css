@@ -3121,6 +3121,9 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .mobile-open-sm { display: none !important; }
 @media screen and (max-width: 439px) and (min-width: 0) { .mobile-open-sm { display: inline-block !important; } }
 
+.login-input { border: 1px solid black !important; }
+.login-input::placeholder { color: #ACACAC !important; font-weight: 300 !important; }
+
 .text-orange { color: #F08500; }
 
 .text-purple { color: #270089 !important; }
@@ -3128,6 +3131,8 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .text-white { color: white !important; }
 
 .borderB-purple { border-bottom: 1px solid #270089; }
+
+.border-dotted { border-bottom: 1px dotted #707070; }
 
 .bg-linear-orange { background: linear-gradient(to bottom, #ffffff 80%, #fffaf6 100%) !important; }
 
@@ -3216,8 +3221,14 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .btn-input-noBorder { border-left: 1px solid #270089 !important; border-right: 0 !important; border-top: 0 !important; border-bottom: 0 !important; }
 .btn-input-noBorder::placeholder { color: #b5b5b6; font-weight: 300; }
 
-.f18-link { display: inline-block; color: #270089; font-size: 1.1rem; }
-.f18-link:hover, .f18-link:active { text-decoration: underline !important; }
+.btn-purple { display: inline-block; width: 100%; padding: 8px; color: white; border: 1px solid #270089; background-color: #270089; font-size: 1.1rem; font-weight: 500; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.btn-purple:hover, .btn-purple:active { background-color: rgba(39, 0, 137, 0.8); }
+
+.btn-purple-line { display: inline-block; width: 100%; padding: 8px; color: #270089; border: 1px solid #270089; background-color: white; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background-color: white; font-size: 1.1rem; font-weight: 500; }
+.btn-purple-line:hover, .btn-purple-line:active { color: white; background-color: #270089; }
+
+.f18-link { display: inline-block; color: #270089; font-size: 1.1rem; font-weight: 300; }
+.f18-link:hover, .f18-link:active { color: #270089; text-decoration: underline !important; }
 
 .text-bell { color: #F08500; font-size: 1rem; padding-right: 10px; transform: rotate(-22deg); }
 @media (max-width: 991.98px) { .text-bell { padding-right: 0; color: white; } }
@@ -3280,7 +3291,8 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .box850 { display: inline-block; width: 100%; max-width: 850px; }
 
-.orangeBox { background-color: #fff3e8; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; padding: 25px; }
+.orangeBox { background-color: #fff3e6; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; padding: 25px; }
+@media (max-width: 767.98px) { .orangeBox.or-close { background-color: transparent; border-top: 1px dotted #707070; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; padding: 25px 0; } }
 
 .bgBox { display: inline-block; width: 100%; background-image: url(../images/bgL.svg), url(../images/bgR.svg); background-repeat: no-repeat, no-repeat; background-position: top left, bottom right; }
 @media (max-width: 767.98px) { .bgBox { background-position: -29px -3%, 112% bottom; background-size: 50%, 50%; } }

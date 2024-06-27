@@ -114,6 +114,18 @@ img {
 
 
 
+// input
+.login-input {
+  border: 1px solid black !important;
+
+  &::placeholder {
+    color:#ACACAC !important;
+    font-weight: 300 !important;
+  }
+}
+
+
+
 // 背景色、文字色、link、線條
 .text-orange {color: $mainOrange;}
 .text-purple {color: $mainColor !important;}
@@ -121,6 +133,10 @@ img {
 
 .borderB-purple {
   border-bottom: 1px solid $mainColor;
+}
+
+.border-dotted {
+  border-bottom: 1px dotted #707070;
 }
 
 .bg-linear-orange {
@@ -505,12 +521,48 @@ img {
   }
 }
 
+.btn-purple {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  border: 1px solid $mainColor;
+  background-color: $mainColor;
+  font-size: 1.1rem;
+  font-weight: 500;
+  @include border-radius(5px);
+
+  &:hover, &:active {
+    background-color: rgba(39, 0, 137, .8);
+  }
+}
+
+.btn-purple-line {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  color: $mainColor;
+  border: 1px solid $mainColor;
+  background-color: white;
+  @include border-radius(5px);
+  background-color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  &:hover, &:active {
+    color: white;
+    background-color: $mainColor;
+  }
+}
+
 .f18-link {
   display: inline-block;
   color: $mainColor;
   font-size: 1.1rem;
+  font-weight: 300;
 
   &:hover, &:active {
+    color: $mainColor;
     text-decoration: underline !important;
   }
 }
@@ -734,9 +786,18 @@ img {
 }
 
 .orangeBox {
-  background-color: #fff3e8;
+  background-color: rgba(255, 243, 230, 1.00);
   @include border-radius(20px);
   padding: 25px;
+
+  &.or-close {
+    @include media-breakpoint-down(md) {
+      background-color: transparent;
+      border-top: 1px dotted #707070;
+      @include border-radius(0);
+      padding: 25px 0;
+    }
+  }
 }
 
 .bgBox {
