@@ -936,6 +936,13 @@ img {
 }
 
 // 隱私條款使用
+.f16-b-black {
+  text-align: left;
+  color: $mainBlack;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .f16-black {
   text-align: left;
   color: $mainBlack;
@@ -950,7 +957,6 @@ img {
     }
   }
 }
-
 .square16-black {
   text-align: left;
   color: $mainBlack;
