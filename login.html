@@ -424,35 +424,38 @@
 
                 <!-- 左邊 -->
                 <div class="col-lg-6 col-12">
-                  <div class="text-end"><a href="" class="f18-link mb-2">手機號碼首次登入</a></div>
-
-                  <div class="d-flex flex-wrap justify-content-between">
-                    <div class="col-12 mb-3">
-                      <input class="form-control login-input" type="text" placeholder="請輸入登記的手機號碼" aria-label="default input example">
-                    </div>
-                    <div class="col-12 mb-3">
-                      <input class="form-control login-input" type="text" placeholder="請輸入密碼" aria-label="default input example">
-                    </div>
-                    <div class="col-4">
-                      <input class="form-control login-input" type="text" placeholder="請輸入辨識碼" aria-label="default input example">
-                    </div>
-                    <div class="col-7">
-                      <p class="f13-black" style="background-color:rgba(230, 230, 230, 1.00);">辨識碼擺放區域</p>
-                    </div>
-                    <div class="col-12 mt-5 mb-2"><button class="btn-purple">登入</button></div>
+                  <div class="text-end"><a href="" class="f18-link mb-2"  data-bs-toggle="modal" data-bs-target="#phoneModal">手機號碼首次登入</a>
                   </div>
 
-                  <div class="d-flex flex-wrap justify-content-end">
-                    <div class="col-4 text-end">
-                      <a href="" class="f18-link"><i class="bi bi-question-circle-fill me-1"></i>忘記登入門號</a>
+                  <form>
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <div class="col-12 mb-3">
+                        <input class="form-control login-input" type="text" placeholder="請輸入登記的手機號碼" aria-label="default input example">
+                      </div>
+                      <div class="col-12 mb-3">
+                        <input class="form-control login-input" type="text" placeholder="請輸入密碼" aria-label="default input example">
+                      </div>
+                      <div class="col-4">
+                        <input class="form-control login-input" type="text" placeholder="請輸入辨識碼" aria-label="default input example">
+                      </div>
+                      <div class="col-7">
+                        <p class="f13-black" style="background-color:rgba(230, 230, 230, 1.00);">辨識碼擺放區域</p>
+                      </div>
+                      <div class="col-12 mt-5 mb-2"><button class="btn-purple">登入</button></div>
                     </div>
-                    <div class="col-3 text-end">
-                       <a href="" class="f18-link"><i class="bi bi-question-circle-fill me-1"></i>忘記密碼</a>
+
+                    <div class="d-flex flex-wrap justify-content-end">
+                      <div class="col-md-4 col-6 text-end">
+                        <a href="" class="f18-link" data-bs-toggle="modal" data-bs-target="#numberModal"><i class="bi bi-question-circle-fill me-1"></i>忘記登入門號</a>
+                      </div>
+                      <div class="col-md-3 col-5 text-end">
+                         <a href="" class="f18-link" data-bs-toggle="modal" data-bs-target="#pwModal"><i class="bi bi-question-circle-fill me-1"></i>忘記密碼</a>
+                      </div>
+                      <div class="col-12 border-dotted my-3"></div>
+                      <div class="col-12 mb-2 text-center"><p class="f20-b-black">還不是HAPPY GO會員嗎？</p></div>
+                      <div class="col-12"><button class="btn-purple-line">註冊</button></div>
                     </div>
-                    <div class="col-12 border-dotted my-3"></div>
-                    <div class="col-12 mb-2 text-center"><p class="f20-b-black">還不是HAPPY GO會員嗎？</p></div>
-                    <div class="col-12"><button class="btn-purple-line">註冊</button></div>
-                  </div>
+                  </form>
                 </div>
 
                 <!-- 右邊 -->
@@ -713,6 +716,192 @@
                 <a class="link-orange13">登入禮</a>
                 <a class="link-orange13">會員日</a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首次登入 光箱 -->
+    <div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row lightBox mb-5">
+              <div class="col-12 mb-4">
+                <span class="f32-b-black me-2 lh25">設定行動電話與密碼</span>
+                <p class="f18-main mt-2">請輸入您的身份證及出生年月，以確認您的身份</p>
+              </div>
+
+              <form>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-3 col-form-label f16-black">身分證號</label>
+                  <div class="col-8 px-0">
+                    <input type="email" class="form-control" id="inputEmail3">
+                  </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                  <label for="inputPassword3" class="col-3 col-form-label f16-black">出生年月</label>
+                  <div class="col-3 px-0">
+                    <select class="form-select" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <span class="col-1">年</span>
+                  <div class="col-3 px-0">
+                    <select class="form-select" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <span class="col-1">月</span>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword3" class="col-3 col-form-label f16-black">辨識碼</label>
+                  <div class="col-4 px-0">
+                    <input type="password" class="form-control" id="inputPassword3">
+                  </div>
+                  <div class="col-5">
+                    <p class="f13-black" style="background-color:rgba(230, 230, 230, 1.00);">辨識碼擺放區域</p>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-purple mt-4">送出</button>
+
+                <p class="f16-orange lh-sm mt-3">※若不確定當初註冊身份證字號或生日資訊，請致電客服中心02-7716-6888。</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 忘記手機 光箱 -->
+    <div class="modal fade" id="numberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-diss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row lightBox mb-5">
+              <div class="col-12 mb-4">
+                <span class="f32-b-black me-2 lh25">忘記登記門號</span>
+                <p class="f18-main mt-2">請輸入您的身份證及出生年月，以確認您的身份</p>
+              </div>
+
+              <form>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-3 col-form-label f16-black">身分證號</label>
+                  <div class="col-8 px-0">
+                    <input type="email" class="form-control" id="inputEmail3">
+                  </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                  <label for="inputPassword3" class="col-3 col-form-label f16-black">出生年月</label>
+                  <div class="col-3 px-0">
+                    <select class="form-select" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <span class="col-1">年</span>
+                  <div class="col-3 px-0">
+                    <select class="form-select" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <span class="col-1">月</span>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword3" class="col-3 col-form-label f16-black">辨識碼</label>
+                  <div class="col-4 px-0">
+                    <input type="password" class="form-control" id="inputPassword3">
+                  </div>
+                  <div class="col-5">
+                    <p class="f13-black" style="background-color:rgba(230, 230, 230, 1.00);">辨識碼擺放區域</p>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-purple mt-4">送出</button>
+
+                <p class="f16-orange lh-sm mt-3">※若不確定當初註冊身份證字號或生日資訊，請致電客服中心02-7716-6888。</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 忘記密碼 光箱 -->
+    <div class="modal fade" id="pwModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-diss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row lightBox mb-5">
+              <div class="col-12 mb-4">
+                <span class="f32-b-black me-2 lh25">忘記密碼</span>
+                <p class="f18-main mt-2">請輸入您的身份證及出生年月，以確認您的身份</p>
+              </div>
+
+              <form>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-3 col-form-label f16-black">身分證號</label>
+                  <div class="col-8 px-0">
+                    <input type="email" class="form-control" id="inputEmail3">
+                  </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                  <label for="inputPassword3" class="col-3 col-form-label f16-black">出生年月</label>
+                  <div class="col-3 px-0">
+                    <select class="form-select" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <span class="col-1">年</span>
+                  <div class="col-3 px-0">
+                    <select class="form-select" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <span class="col-1">月</span>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword3" class="col-3 col-form-label f16-black">辨識碼</label>
+                  <div class="col-4 px-0">
+                    <input type="password" class="form-control" id="inputPassword3">
+                  </div>
+                  <div class="col-5">
+                    <p class="f13-black" style="background-color:rgba(230, 230, 230, 1.00);">辨識碼擺放區域</p>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-purple mt-4">送出</button>
+
+                <p class="f16-orange lh-sm mt-3">※若不確定當初註冊身份證字號或生日資訊，請致電客服中心02-7716-6888。</p>
+              </form>
             </div>
           </div>
         </div>

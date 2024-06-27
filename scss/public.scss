@@ -598,6 +598,23 @@ img {
   font-weight: 300;
 }
 
+.f16-orange {
+  color: $mainOrange;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.f18-main {
+  color: $mainColor;
+  font-weight: 300;
+  font-size: 1.125rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+}
+
+
 .f20-b-black {
   color: black;
   font-weight: 500;
@@ -653,10 +670,10 @@ img {
 .f32-b-main {
   color: $mainColor;
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 2rem;
 
   @include media-breakpoint-down(lg) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
