@@ -132,11 +132,11 @@ img {
 .text-white {color:white !important;}
 
 .borderB-purple {
-  border-bottom: 1px solid $mainColor;
+  border-bottom: 2px solid $mainColor;
 }
 
 .border-dotted {
-  border-bottom: 1px dotted #707070;
+  border-bottom: 2px dotted #a7a7a7;
 }
 
 .bg-linear-orange {
@@ -616,7 +616,7 @@ img {
     }
 
     > a {
-      display: inline-block;
+      // display: inline-block;
       width: 90%;
       color: $mainBlack;
 
@@ -691,122 +691,6 @@ img {
 
 
 
-// .block-l-menuBox {
-//   display: inline-block;
-//   width: calc(100% - 15px);
-//   background-color: white;
-//   @include border-radius(3px);
-//   height: 100%;
-//   @include transition(left .3s, right .3s);
-//   @include clearfix();
-//   text-align: left;
-//   padding: 0 27px 0 0;
-//   float: left;
-
-//   span {
-//     display: inline-block;
-//     width: 100%;
-//     padding: 10px 15px;
-//     color: black;
-//     text-decoration: none;
-//     cursor: pointer;
-//     @include transition(all .3s);
-
-//     > a {
-//       color: black;
-//     }
-//   }
-
-//   > span, > a, > div > a, > div > div > a, > div > span {
-//     display: inline-block;
-//     width: 100%;
-//     padding: 0;
-//     color: black;
-//     text-decoration: none;
-//     cursor: pointer;
-//     @include transition(all .3s);
-
-//     &.s_menublue {
-//       color: black;
-//       border-left: 2px solid yellow;
-//     }
-//   }
-
-//   > span {
-//     margin-top: 20px;
-
-//     &:first-child {
-//       margin-top: 0;
-//     }
-//   }
-
-//   > span, > a {
-//     color: black;
-//     font-size: 1.8rem;
-//     font-weight: bolder;
-//     line-height: 50px;
-//     position: relative;
-
-//     &:after {
-//       display: inline-block;
-//       width: 100%;
-//       content: '';
-//       position: absolute;
-//       left: 0;
-//       bottom: -10px;
-//       border-bottom: 1px dotted rgba(162, 162, 163, 1.00);
-//     }
-
-//     + div.m-smenu {
-//       display: none;
-//     }
-//   }
-
-//   > span.s {
-//     background-color: rgba(255, 245, 151, 1.00);
-//     @include border-radius(30px);
-
-//     + div {
-//       display: inline-block;
-//     }
-//   }
-
-//   .m-smenu {
-//     margin-top: 20px;
-//     width: 100%;
-
-//     > a {
-//       display: inline-block;
-//       width: 100%;
-//       padding: 10px 15px;
-//       color: black;
-//       text-decoration: none;
-//       cursor: pointer;
-//       @include transition(all .3s);
-//       font-size: 1.5rem;
-//       background-color: rgba(231, 231, 231, 1.00);
-//       @include border-radius(20px);
-//       margin-bottom: 15px;
-
-//       &:last-child {
-//         margin-bottom: 0;
-//       }
-
-//       &:hover, &:active {
-//         color: white;
-//         background-color: rgba(55, 52, 58, 1.00);
-//       }
-
-//       &.l-menu-active {
-//         color: white;
-//         background-color: rgba(55, 52, 58, 1.00);
-//       }
-//     }
-//   }
-// }
-
-
-
 // text
 .text-bell {
   color: $mainOrange;
@@ -830,6 +714,12 @@ img {
   font-size: .8rem;
 }
 
+.f16-lightgray {
+  color: #B5B5B6;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 .f16-gray {
   color: $textGray;
   font-size: 1rem;
@@ -844,6 +734,12 @@ img {
 
 .f18-main {
   color: $mainColor;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.f24-main {
+  color: $mainColor;
   font-weight: 300;
   font-size: 1.125rem;
 
@@ -851,6 +747,7 @@ img {
     font-size: 1rem;
   }
 }
+
 
 
 .f20-b-black {
@@ -935,6 +832,46 @@ img {
   }
 }
 
+// member
+.f42-ba {
+  display: inline-block;
+  color: $mainColor;
+  font-size: 3.8rem;
+  font-weight: bold;
+  line-height: 35px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 3rem;
+  }
+
+  &:before {
+    display: inline-block;
+    content: '現有紅利點數：';
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: $mainColor;
+  }
+  &:after {
+    display: inline-block;
+    content: '點';
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: $mainColor;
+    vertical-align: baseline;
+  }
+}
+
+.li-point {
+  &:after {
+    display: inline-block;
+    content: attr(title);
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+    vertical-align: baseline;
+  }
+}
+
 // 隱私條款使用
 .f16-b-black {
   text-align: left;
@@ -1005,6 +942,15 @@ img {
     text-align: left;
     margin-bottom: 15px;
     line-height: 25px;
+
+    > ul {
+      list-style: disc;
+      li {
+       &::marker {
+        color:$mainColor;
+       }
+      }
+    }
 
     > a {
       color: $mainOrange;
@@ -1158,6 +1104,17 @@ img {
   @include media-breakpoint-down(lg) {
     @include border-radius(20px);
   }
+}
+
+.welcomeBox {
+  display: inline-block;
+  width: 100%;
+  background-color: #feebda;
+  color: $mainOrange;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 10px 15px;
+  text-align: left;
 }
 
 .lightBox {

@@ -19,7 +19,7 @@
 
     <!-- 共用外部 font 檔案 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts        .googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.bundle.min.js"></script> 
@@ -415,77 +415,35 @@
       </div>
     </header>
 
-    <!-- 單元大Banner -->
-    <div class="position-relative">
-      <div class="d-flex navBox boxNot-50">
-        <div class="col-md-6 col-2"></div>
-        <div class="col-md-5 col-9 text-md-center text-end">
-          <p class="f44-b-white lh-1">會員中心</p>
-          <p class="f32-white">Member Center</p>
+    <div class="mainBox container-fluid my-md-5 my-4">  
+        <div class="whiteBox shadow pt-xl-5 pe-xl-5 pb-xl-5 pt-4 pe-4 pb-4 mb-md-4 mb-0">
+          <div class="row mx-auto justify-content-lg-between">
+            <div class="col-12 text-lg-start text-center mb-5 ps-xl-5 ps-4">
+              <span class="f32-b-main lh25">會員服務</span>
+            </div>
+
+            <div class="col-3 redborder ps-0">
+              <ul class="pageNav">
+                <li><a href=''>點數及交易明細查詢</a></li>
+                <li><a href=''>個人資料維護</a></li>
+                <li><a href=''>變更密碼</a></li>
+                <li><a href=''>電子發票</a></li>
+                <li><a href=''>個人優惠通知設定</a></li>
+                <!-- 0627 active-sec 改由 js 控制 -->
+                <li class="pageNav-sec">得獎公告</li>
+                <div class="pageNav-sec-box">
+                  <a class="active-sec">第二層01</a>
+                  <a>第二層02</a>
+                  <a>第二層03</a>
+                </div>
+              </ul>
+            </div>
+
+
+            <div class="col-9 redborder">
+              8
+            </div>
         </div>
-        <div class="col-md-1 col-1"></div>
-      </div>
-      <picture>
-        <source srcset="images/member-bg-m.png" media="(max-width: 767px)">
-        <img src="images/member-bg.png" alt="">
-      </picture>
-    </div>
-
-    <div class="mainBox container-fluid my-md-5 my-4">
-      <!-- 手機版標題＋選單 -->
-      <div class="container-fluid px-0 mobile-open-m">
-        <div class="row my-3">
-          <div class="col-5 text-start">
-            <p class="f32-b-main">會員服務</p>
-          </div>
-          <div class="col-7 ps-0">
-            <select class="form-select" id="specificSizeSelect">
-              <option selected>請選擇服務項目</option>
-              <option value="1">點數及交易明細查詢</option>
-              <option value="2">個人資料維護</option>
-              <option value="3">變更密碼</option>
-              <option value="3">電子發票</option>
-              <option value="3">個人優惠通知設定</option>
-              <option value="3">得獎公告</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- 網頁版選單＋內容 -->
-      <div class="whiteBox shadow pt-xl-5 pe-xl-5 pb-xl-5 pt-4 pe-4 pb-4 mb-md-4 mb-0">
-        <div class="row mx-auto justify-content-lg-between">
-          <div class="col-12 text-lg-start text-center mb-4 ps-xl-5 ps-4 mobile-close-m">
-            <p class="f32-b-main">會員服務</p>
-          </div>
-
-          <!-- 左邊選單 -->
-          <div class="col-lg-3 ps-0 mobile-close-m">
-            <ul class="pageNav">
-              <li><a href=''>點數及交易明細查詢</a></li>
-              <li><a href=''>個人資料維護</a></li>
-              <li><a href=''>變更密碼</a></li>
-              <li><a href=''>電子發票</a></li>
-              <li><a href=''>個人優惠通知設定</a></li>
-              <li><a href=''>得獎公告</a></li>
-            </ul>
-          </div>
-
-          <!-- 右邊內容 -->
-          <div class="col-lg-9 col-12 pe-0 text-start">
-            <p class="welcomeBox mb-3">歡迎更新手機門號資料，讓您可以更快速登入！</p>
-            <p class="f18-main text-start mb-4">江Ｘ如，您好！</p>
-            <p class='f42-ba'>2401</p>
-            <p class="f16-lightgray">(不含今日交易點數)</p>
-            <p class="border-dotted my-3"></p>
-            <ul class="ps-3">
-              <li class="li-point" title="0">2024-12-31&nbsp;&nbsp;到期點數：</li>
-              <li class="li-point" title="0">30天內&nbsp;&nbsp;到期點數：</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
     </div>
     
     <div class="mainBox container-fluid mb-5">
