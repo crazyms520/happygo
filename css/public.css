@@ -3130,9 +3130,9 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .text-white { color: white !important; }
 
-.borderB-purple { border-bottom: 1px solid #270089; }
+.borderB-purple { border-bottom: 2px solid #270089; }
 
-.border-dotted { border-bottom: 1px dotted #707070; }
+.border-dotted { border-bottom: 2px dotted #a7a7a7; }
 
 .bg-linear-orange { background: linear-gradient(to bottom, #ffffff 80%, #fffaf6 100%) !important; }
 
@@ -3240,7 +3240,7 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .pageNav > li.pageNav-sec.active-sec { color: white; background-color: #270089; border-radius: 0 10px 10px 0; }
 .pageNav > li.pageNav-sec.active-sec:before { color: white; }
 .pageNav > li.pageNav-sec.active-sec:after { content: '\f106'; color: #F08500; padding: 0 15px; }
-.pageNav > li > a { display: inline-block; width: 90%; color: #3c3a39; }
+.pageNav > li > a { width: 90%; color: #3c3a39; }
 .pageNav > li > a:hover, .pageNav > li > a:active { color: white; }
 .pageNav > li:before { display: inline-block; content: "\f519"; font-family: bootstrap-icons !important; color: #270089; margin-right: 4px; }
 .pageNav > li:hover, .pageNav > li:active, .pageNav > li.active { cursor: pointer; color: white; background-color: #270089; border-radius: 0 10px 10px 0; }
@@ -3260,12 +3260,16 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .f13-black { color: #3c3a39; font-size: .8rem; }
 
+.f16-lightgray { color: #B5B5B6; font-size: 1rem; font-weight: 300; }
+
 .f16-gray { color: #3C3A39; font-size: 1rem; font-weight: 300; }
 
 .f16-orange { color: #F08500; font-size: 1rem; font-weight: 300; }
 
-.f18-main { color: #270089; font-weight: 300; font-size: 1.125rem; }
-@media (max-width: 991.98px) { .f18-main { font-size: 1rem; } }
+.f18-main { color: #270089; font-weight: 500; font-size: 1.5rem; }
+
+.f24-main { color: #270089; font-weight: 300; font-size: 1.125rem; }
+@media (max-width: 991.98px) { .f24-main { font-size: 1rem; } }
 
 .f20-b-black { color: black; font-weight: 500; font-size: 1.1rem; }
 
@@ -3292,6 +3296,13 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .f32-white { color: white; font-weight: 300; font-size: 2.2rem; }
 @media (max-width: 991.98px) { .f32-white { font-size: 1rem; } }
 
+.f42-ba { display: inline-block; color: #270089; font-size: 3.8rem; font-weight: bold; line-height: 35px; }
+@media (max-width: 991.98px) { .f42-ba { font-size: 3rem; } }
+.f42-ba:before { display: inline-block; content: '現有紅利點數：'; font-weight: 300; font-size: 1.1rem; color: #270089; }
+.f42-ba:after { display: inline-block; content: '點'; font-weight: 300; font-size: 1.1rem; color: #270089; vertical-align: baseline; }
+
+.li-point:after { display: inline-block; content: attr(title); font-size: 1.2rem; color: red; font-weight: bold; vertical-align: baseline; }
+
 .f16-b-black { text-align: left; color: #3c3a39; font-weight: 500; font-size: 1rem; }
 
 .f16-black { text-align: left; color: #3c3a39; font-weight: 300; font-size: 1rem; }
@@ -3309,6 +3320,8 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .info-ul-num { list-style: decimal; padding-left: 18px; }
 .info-ul-num > li { font-size: 1rem; font-weight: 300; color: #3c3a39; text-align: left; margin-bottom: 15px; line-height: 25px; }
+.info-ul-num > li > ul { list-style: disc; }
+.info-ul-num > li > ul li::marker { color: #270089; }
 .info-ul-num > li > a { color: #F08500; }
 .info-ul-num > li > a:hover, .info-ul-num > li > a:active { text-decoration: underline !important; }
 
@@ -3348,6 +3361,8 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .whiteBox { display: inline-block; width: 100%; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; background-color: white; }
 @media (max-width: 991.98px) { .whiteBox { -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; } }
+
+.welcomeBox { display: inline-block; width: 100%; background-color: #feebda; color: #F08500; font-size: 1rem; font-weight: 300; padding: 10px 15px; text-align: left; }
 
 .lightBox { display: inline-block; width: 100%; margin: 0 auto; text-align: left; }
 
