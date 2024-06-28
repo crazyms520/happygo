@@ -1,15 +1,25 @@
 
 $(function() {
-  $('.bg-mainColor-mobile .nav-item').on('click', function(){
-    let target = $(this).find('.nav-link').attr('data-bs-target')
-
-    if($('.section-banner').is(':visible') && $(target).is(':visible')) {
-      $('.section-banner').hide();
-    } else {
-      $('.section-banner').show(); 
-    }
+  $('.collapse').on('shown.bs.collapse', function(event) {
+    let target = $(event.target);
+    console.log(target.attr('id'));
     
-    console.log(target);
-    console.log($(target).is(':visible'))
-  });
+    $(`.collapse.show:not(#${target.attr('id')})`).collapse('hide');
+    // console.log(event);
+    
+    $('.section-banner').hide();
+  })
+
+  $('.collapse').on('hide.bs.collapse', function(event) {
+
+    // console.log($(this));
+    // $(this).removeClass('show');
+    $('.section-banner').show();
+  })
+
+  $(document).click(function(event) {
+    if (!$(event.target).is(".bg-mainColor-mobile *, .tab-content *")) {
+      $('.collapse').collapse('hide');
+    }
+});
 });
