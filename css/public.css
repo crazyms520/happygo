@@ -3124,13 +3124,19 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .login-input { border: 1px solid black !important; }
 .login-input::placeholder { color: #ACACAC !important; font-weight: 300 !important; }
 
-.text-orange { color: #F08500; }
+.text-orange { color: #F08500 !important; }
 
 .text-purple { color: #270089 !important; }
 
 .text-white { color: white !important; }
 
+.text-red { color: red !important; padding: 0 3px; }
+
+.table-hr { margin: 0 !important; width: 100%; background-color: #e1d5ff !important; opacity: 1 !important; }
+
 .borderB-purple { border-bottom: 2px solid #270089; }
+
+.border-table-purple { border: 1px solid #e1d5ff; }
 
 .border-dotted { border-bottom: 2px dotted #a7a7a7; }
 
@@ -3271,6 +3277,8 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .f24-main { color: #270089; font-weight: 300; font-size: 1.125rem; }
 @media (max-width: 991.98px) { .f24-main { font-size: 1rem; } }
 
+.f24-b-main { color: #270089; font-weight: 500; font-size: 1.3rem; }
+
 .f20-b-black { color: black; font-weight: 500; font-size: 1.1rem; }
 
 .f26-b-black { color: black; font-weight: 500; font-size: 1.6rem; }
@@ -3332,6 +3340,9 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 
 .lh25 { line-height: 25px; }
 
+.w-no-100 { width: unset !important; }
+@media (max-width: 767.98px) { .w-no-100 { width: 100% !important; } }
+
 .box850 { display: inline-block; width: 100%; max-width: 850px; }
 
 .orangeBox { background-color: #fff3e6; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; padding: 25px; }
@@ -3388,6 +3399,10 @@ img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: 
 .accordion-button { border-top-left-radius: 0; border-top-right-radius: 0; }
 .accordion-button.nav-m { color: #270089; }
 .accordion-button.nav-m:not(.collapsed) { color: #F08500; background-color: #f8f8f8; }
+
+.table-purple { color: #270089; font-size: .9rem; padding: 10px; background-color: #f7f4ff; border-right: 1px solid #e1d5ff; }
+
+.table-gray { color: #3c3a39; font-size: .9rem; padding: 10px; background-color: #f7f7f7; }
 
 .rounded-4 { -moz-border-radius: 1rem; -webkit-border-radius: 1rem; border-radius: 1rem; }
 

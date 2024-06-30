@@ -24,6 +24,7 @@
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.bundle.min.js"></script> 
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
+    <script language="javascript" type="text/javascript" src="js/intro.js"></script>
   </head>
   <body>
     
@@ -299,19 +300,29 @@
           <!-- Nav tabs -->
           <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="true">點數使用</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePoints" aria-expanded="false" aria-controls="collapsePoints">
+                點數使用
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">最新優惠</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNews" aria-expanded="false" aria-controls="collapseNewes">
+                最新優惠
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">數位服務</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices">
+                最新優惠
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="creditCard-tab" data-bs-toggle="tab" data-bs-target="#creditCard" type="button" role="tab" aria-controls="creditCard" aria-selected="false">卡友福利</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCreditCard" aria-expanded="false" aria-controls="collapseCreditCard">
+                最新優惠
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="member-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="member" aria-selected="false">會員中心</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMember" aria-expanded="false" aria-controls="collapseMember">
+                最新優惠
+              </button>
             </li>
           </ul>
         </div>
@@ -320,7 +331,7 @@
       <!-- 網頁選單-次選單 -->
       <div class="tab-content">
         <!-- 點數使用 -->
-        <div class="tab-pane position-relative" id="points" role="tabpanel" aria-labelledby="points-tab">
+        <div class="collapse position-relative" id="collapsePoints">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">線上兌點</a></li>
@@ -335,10 +346,10 @@
           <picture>
             <source srcset="images/nav-bg01-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg01.png" alt="">
-          </picture>
+          </picture> 
         </div>
         <!-- 最新優惠 -->
-        <div class="tab-pane position-relative" id="news" role="tabpanel" aria-labelledby="news-tab">
+        <div class="collapse position-relative" id="collapseNews">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">兌點優惠</a></li>
@@ -354,9 +365,9 @@
             <source srcset="images/nav-bg02-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg02.png" alt="">
           </picture>
-        </div>
+        </div> 
         <!-- 數位服務 -->
-        <div class="tab-pane position-relative" id="services" role="tabpanel" aria-labelledby="services-tab">
+        <div class="collapse position-relative" id="collapseServices">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-3"><a class="shadow-sm">購賺點</a></li>
@@ -372,9 +383,9 @@
             <source srcset="images/nav-bg03-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg03.png" alt="">
           </picture>
-        </div>
+        </div> 
         <!-- 卡友福利 -->
-        <div class="tab-pane position-relative" id="creditCard" role="tabpanel" aria-labelledby="creditCard-tab">
+        <div class="collapse position-relative" id="collapseCreditCard">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">會員分級訂閱</a></li>
@@ -390,9 +401,9 @@
             <source srcset="images/nav-bg04-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg04.png" alt="">
           </picture>
-        </div>
+        </div> 
         <!-- 會員中心 -->
-        <div class="tab-pane position-relative" id="member" role="tabpanel" aria-labelledby="member-tab">
+        <div class="collapse position-relative" id="collapseMember">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">點數交易查詢</a></li>
@@ -409,12 +420,12 @@
             <source srcset="images/nav-bg05-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg05.png" alt="">
           </picture>
-        </div>
+        </div> 
       </div>
     </header>
 
     <!-- 單元大Banner -->
-    <div class="position-relative">
+    <div class="section-banner position-relative">
       <div class="d-flex navBox boxNot-50">
         <div class="col-md-6 col-2"></div>
         <div class="col-md-5 col-9 text-md-center text-end">

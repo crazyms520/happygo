@@ -19,13 +19,12 @@
 
     <!-- 共用外部 font 檔案 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts        .googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.bundle.min.js"></script> 
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
-    <!-- 0627 新增 member.js -->
-    <script language="javascript" type="text/javascript" src="js/member.js"></script>
+    <script language="javascript" type="text/javascript" src="js/intro.js"></script>
   </head>
   <body class="bg-member">
     
@@ -301,19 +300,29 @@
           <!-- Nav tabs -->
           <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points" type="button" role="tab" aria-controls="points" aria-selected="true">點數使用</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePoints" aria-expanded="false" aria-controls="collapsePoints">
+                點數使用
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">最新優惠</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNews" aria-expanded="false" aria-controls="collapseNewes">
+                最新優惠
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false">數位服務</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices">
+                最新優惠
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="creditCard-tab" data-bs-toggle="tab" data-bs-target="#creditCard" type="button" role="tab" aria-controls="creditCard" aria-selected="false">卡友福利</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCreditCard" aria-expanded="false" aria-controls="collapseCreditCard">
+                最新優惠
+              </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="member-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="member" aria-selected="false">會員中心</button>
+              <button class="nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMember" aria-expanded="false" aria-controls="collapseMember">
+                最新優惠
+              </button>
             </li>
           </ul>
         </div>
@@ -322,7 +331,7 @@
       <!-- 網頁選單-次選單 -->
       <div class="tab-content">
         <!-- 點數使用 -->
-        <div class="tab-pane position-relative" id="points" role="tabpanel" aria-labelledby="points-tab">
+        <div class="collapse position-relative" id="collapsePoints">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">線上兌點</a></li>
@@ -337,10 +346,10 @@
           <picture>
             <source srcset="images/nav-bg01-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg01.png" alt="">
-          </picture>
+          </picture> 
         </div>
         <!-- 最新優惠 -->
-        <div class="tab-pane position-relative" id="news" role="tabpanel" aria-labelledby="news-tab">
+        <div class="collapse position-relative" id="collapseNews">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">兌點優惠</a></li>
@@ -356,9 +365,9 @@
             <source srcset="images/nav-bg02-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg02.png" alt="">
           </picture>
-        </div>
+        </div> 
         <!-- 數位服務 -->
-        <div class="tab-pane position-relative" id="services" role="tabpanel" aria-labelledby="services-tab">
+        <div class="collapse position-relative" id="collapseServices">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-3"><a class="shadow-sm">購賺點</a></li>
@@ -366,17 +375,17 @@
               <li class="col-md-auto col-4"><a class="shadow-sm">iMoney</a></li>
             </ul>
             <!-- <ul class="mainNav-ul">
-              <li class="col-md-auto col-4"><a class="shadow-sm"></a></li>
-              <li class="col-md-auto col-4"><a class="shadow-sm"></a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">點數轉移</a></li>
+              <li class="col-md-auto col-4"><a class="shadow-sm">愛心捐贈</a></li>
             </ul> -->
           </div>
           <picture>
             <source srcset="images/nav-bg03-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg03.png" alt="">
           </picture>
-        </div>
+        </div> 
         <!-- 卡友福利 -->
-        <div class="tab-pane position-relative" id="creditCard" role="tabpanel" aria-labelledby="creditCard-tab">
+        <div class="collapse position-relative" id="collapseCreditCard">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">會員分級訂閱</a></li>
@@ -392,9 +401,9 @@
             <source srcset="images/nav-bg04-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg04.png" alt="">
           </picture>
-        </div>
+        </div> 
         <!-- 會員中心 -->
-        <div class="tab-pane position-relative" id="member" role="tabpanel" aria-labelledby="member-tab">
+        <div class="collapse position-relative" id="collapseMember">
           <div class="d-flex navBox">
             <ul class="mainNav-ul">
               <li class="col-md-auto col-4"><a class="shadow-sm">點數交易查詢</a></li>
@@ -411,12 +420,12 @@
             <source srcset="images/nav-bg05-m.png" media="(max-width: 767px)">
             <img src="images/nav-bg05.png" alt="">
           </picture>
-        </div>
+        </div> 
       </div>
     </header>
 
     <!-- 單元大Banner -->
-    <div class="position-relative">
+    <div class="section-banner position-relative">
       <div class="d-flex navBox boxNot-50">
         <div class="col-md-6 col-2"></div>
         <div class="col-md-5 col-9 text-md-center text-end">
@@ -431,7 +440,7 @@
       </picture>
     </div>
 
-    <div class="mainBox container-fluid my-md-5 my-4">
+    <div class="mainBox container-fluid my-md-5 mt-2 mb-4">
       <!-- 手機版標題＋選單 -->
       <div class="container-fluid px-0 mobile-open-m">
         <div class="row my-3">
@@ -455,15 +464,13 @@
       <!-- 網頁版選單＋內容 -->
       <div class="whiteBox shadow pt-xl-5 pe-xl-5 pb-xl-5 pt-4 pe-4 pb-4 mb-md-4 mb-0">
         <div class="row mx-auto justify-content-lg-between">
-          <div class="col-12 text-lg-start text-center mb-4 ps-xl-5 ps-4 mobile-close-m">
-            <p class="f32-b-main">會員服務</p>
-          </div>
 
           <!-- 左邊選單 -->
           <div class="col-lg-3 ps-0 mobile-close-m">
+            <p class="f32-b-main text-lg-start text-center mb-4 ps-xl-5 ps-4 mobile-close-m">會員服務</p>
             <ul class="pageNav">
-              <li class="active"><a href=''>點數及交易明細查詢</a></li>
-              <li><a href=''>個人資料維護</a></li>
+              <li><a href=''>點數及交易明細查詢</a></li>
+              <li class="active"><a href=''>個人資料維護</a></li>
               <li><a href=''>變更密碼</a></li>
               <li><a href=''>電子發票</a></li>
               <li><a href=''>個人優惠通知設定</a></li>
@@ -473,19 +480,140 @@
 
           <!-- 右邊內容 -->
           <div class="col-lg-9 col-12 pe-0 text-start">
-            <p class="welcomeBox mb-3 mt-1">歡迎更新手機門號資料，讓您可以更快速登入！</p>
-            <p class="f18-main text-start mb-4">江Ｘ如，您好！</p>
-            <p class='f42-ba'>2401</p>
-            <p class="f16-lightgray">(不含今日交易點數)</p>
-            <p class="border-dotted my-3"></p>
-            <ul class="ps-3">
-              <li class="li-point" title="0">2024-12-31&nbsp;&nbsp;到期點數：</li>
-              <li class="li-point" title="0">30天內&nbsp;&nbsp;到期點數：</li>
-            </ul>
+            <div class="row mx-auto">
+              <div class="col-12 borderB-purple pb-2 text-start mb-3 px-0 f24-b-main"> 個人資料維護</div>
+              <!-- 01 -->
+              <div class="col-12 px-0">
+                <p class="f16-black mb-3">提醒您！為確保您的權益，辦卡後七天，方可進行個人資料修改！(<span class="text-red">*</span>為必填欄位)</p>
+              </div>
+              <div class="col-12 border-table-purple px-0 mb-4">
+                <div class="d-flex flex-wrap">
+                  <div class="col-4 col-sm-2 table-purple">會員卡號</div>
+                  <div class="col-8 col-sm-10 table-gray">200X-XXXX-XXX5-1、210X-XXXX-XXX1-5、299X-XXXX-XXX8-8</div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">中文姓名</div>
+                  <div class="col-8 col-sm-10 table-gray">江Ｘ如</div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">英文姓名</div>
+                  <div class="col-8 col-sm-10 table-gray"></div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">性 別</div>
+                  <div class="col-8 col-sm-10 table-gray">女</div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">出生日期<span class="text-red">*</span></div>
+                  <div class="col-8 col-sm-10 table-gray">12月24日</div>
+                </div>
+              </div>
 
-            <p class="welcomeBox my-3">
-              為防堵詐騙集團案件，如接獲不明電話或簡訊通知要求提供或核對帳戶資料，並告知您因設定錯誤需要重新進行付款作業，請立即掛斷電話後，撥打客服中心專線：(02)7716-6888，或警政署防詐騙專線：165 求證，以確認您的權利。為確保您的點數權益，請隨時保持個人資料之正確性，以避免錯失重要權益通知。
-            </p>
+              <!-- 02 -->
+              <div class="col-12 px-0">
+                <p class="f16-black mb-3">
+                  <span class="text-red">*</span>以下三組電話，行動電話為必填。為確保您的權益，請輸入行動電話與E-mail，若有任何卡友相關事宜，將依此與您連繫。
+                </p>
+              </div>
+              <div class="col-12 border-table-purple px-0 mb-4">
+                <div class="d-flex flex-wrap">
+                  <div class="col-4 col-sm-2 table-purple">住家電話</div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <input class="form-control w-no-100" type="text" value="02-29XXX214" aria-label="">
+                  </div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">公司電話</div>
+                  <div class="col-8 col-sm-10 table-gray"></div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">行動電話<span class="text-red">*</span></div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <input class="form-control w-no-100" type="text" value="0970XXX333" aria-label="">
+                  </div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">E-Mail<span class="text-red">*</span></div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    arashi3104@XXXX
+                    <p><span class="text-red">*</span>如需修改E-Mail，請<a href="">點此進入</a>文字客服修改！</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 03-->
+              <div class="col-12 px-0">
+                <p class="f16-black">
+                  <span class="text-red">*</span>以下地址請擇一填寫，謝謝！
+                </p>
+                <p class="f16-black mb-3">
+                  <span class="text-red">*</span><span class="text-orange">溫馨提醒：</span>為確保卡友權益，請填寫完整地址，以利HAPPY GO卡可順利寄送！
+                </p>
+              </div>
+              <div class="col-12 border-table-purple px-0 mb-4">
+                <div class="d-flex flex-wrap">
+                  <div class="col-4 col-sm-2 table-purple">地　　址</div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <input class="form-control w-no-100" type="text" value="02-29XXX214" aria-label="">
+                  </div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">職業別</div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <select class="form-select  w-no-100" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">學 歷<span class="text-red">*</span></div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <select class="form-select  w-no-100" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">年收入<span class="text-red">*</span></div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <select class="form-select  w-no-100" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                  <hr class="table-hr">
+                  <div class="col-4 col-sm-2 table-purple">家庭狀況<span class="text-red">*</span></div>
+                  <div class="col-8 col-sm-10 table-gray">
+                    <select class="form-select  w-no-100" id="specificSizeSelect">
+                      <option selected>請選擇</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row mx-auto">
+              <div class="col-12 px-0">
+                <p class="welcomeBox my-3">
+                  為防堵詐騙集團案件，如接獲不明電話或簡訊通知要求提供或核對帳戶資料，並告知您因設定錯誤需要重新進行付款作業，請立即掛斷電話後，撥打客服中心專線：(02)7716-6888，或警政署防詐騙專線：165 求證，以確認您的權利。為確保您的點數權益，請隨時保持個人資料之正確性，以避免錯失重要權益通知。
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>

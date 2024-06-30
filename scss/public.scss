@@ -127,12 +127,28 @@ img {
 
 
 // 背景色、文字色、link、線條
-.text-orange {color: $mainOrange;}
+.text-orange {color: $mainOrange !important;}
 .text-purple {color: $mainColor !important;}
 .text-white {color:white !important;}
+.text-red {
+  color: red !important;
+  padding: 0 3px;
+}
+
+
+.table-hr {
+  margin: 0 !important;
+  width: 100%;
+  background-color: #e1d5ff !important;
+  opacity: 1 !important;
+}
 
 .borderB-purple {
   border-bottom: 2px solid $mainColor;
+}
+
+.border-table-purple {
+  border: 1px solid #e1d5ff;
 }
 
 .border-dotted {
@@ -686,7 +702,6 @@ img {
       }
     }
   }
-
 }
 
 
@@ -746,6 +761,12 @@ img {
   @include media-breakpoint-down(lg) {
     font-size: 1rem;
   }
+}
+
+.f24-b-main {
+  color: $mainColor;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 
@@ -986,6 +1007,14 @@ img {
 
 
 // BOX
+.w-no-100 {
+  width: unset !important;
+
+  @include media-breakpoint-down(md) {
+    width: 100% !important;
+  }
+}
+
 .box850 {
   display: inline-block;
   width: 100%;
@@ -1150,9 +1179,6 @@ img {
   }
 }
 
-// .modal-dialog {
-//   max-width: 900px !important;
-// }
 .modal-header {
   border-bottom: 0 !important;
 }
@@ -1206,7 +1232,21 @@ img {
       background-color: #f8f8f8;
     }
   }
-  
+}
+
+.table-purple {
+  color: $mainColor;
+  font-size: .9rem;
+  padding: 10px;
+  background-color: #f7f4ff;
+  border-right: 1px solid #e1d5ff;
+}
+
+.table-gray {
+  color: $mainBlack;
+  font-size: .9rem;
+  padding: 10px;
+  background-color: #f7f7f7;
 }
 
 
