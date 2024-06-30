@@ -1208,6 +1208,10 @@ img {
 
 
 // other
+.rounded-4 {
+  @include border-radius(1rem);
+  
+}
 .headerLogo {
   @include media-breakpoint-down(lg) {
     width: 180px;
