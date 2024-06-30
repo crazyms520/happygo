@@ -1133,7 +1133,11 @@ img {
 }
 
 
-
+.collapsing {
+  position: absolute !important;
+  opacity: 0;
+  transition: none;
+}
 // boostrap
 .tab-content {
   // position: absolute;
@@ -1173,7 +1177,7 @@ img {
       padding: 0.5rem 0.5rem !important;
     }
 
-    &.active {
+    &.active, &[aria-expanded="true"] {
       background-color: $mainOrange !important;
 
       @include media-breakpoint-down(lg) {
