@@ -529,7 +529,7 @@
                   <div class="col-4 col-sm-2 table-purple">E-Mail<span class="text-red">*</span></div>
                   <div class="col-8 col-sm-10 table-gray">
                     arashi3104@XXXX
-                    <p><span class="text-red">*</span>如需修改E-Mail，請<a href="">點此進入</a>文字客服修改！</p>
+                    <p><span class="text-red">*&nbsp;如需修改E-Mail，請</span><a href="">點此進入</a><span class="text-red">文字客服修改！</span></p>
                   </div>
                 </div>
               </div>
@@ -547,8 +547,55 @@
                 <div class="d-flex flex-wrap">
                   <div class="col-4 col-sm-2 table-purple">地　　址</div>
                   <div class="col-8 col-sm-10 table-gray">
-                    <input class="form-control w-no-100" type="text" value="02-29XXX214" aria-label="">
+                    <div class="row mx-auto g-sm-3 g-2 px-0 align-items-center">
+                      <div class="col-sm-2 col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                          <label class="form-check-label" for="flexCheckChecked">
+                            一般地址
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-2 col-12">
+                        <select class="form-select  w-no-100" id="specificSizeSelect">
+                          <option selected>縣市</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-3 col-12">
+                        <select class="form-select  w-no-100" id="specificSizeSelect">
+                          <option selected>鄉鎮市區</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-5 col-12">
+                        <input class="form-control" type="text" aria-label="">
+                      </div>
+
+                      <div class="col-sm-2 col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                          <label class="form-check-label" for="flexCheckChecked">
+                            特殊地址
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-10 col-12">
+                        <input class="form-control" type="text" aria-label="">
+                      </div>
+                    </div>
                   </div>
+
                   <hr class="table-hr">
                   <div class="col-4 col-sm-2 table-purple">職業別</div>
                   <div class="col-8 col-sm-10 table-gray">
@@ -591,15 +638,24 @@
                   <hr class="table-hr">
                   <div class="col-4 col-sm-2 table-purple">家庭狀況<span class="text-red">*</span></div>
                   <div class="col-8 col-sm-10 table-gray">
-                    <select class="form-select  w-no-100" id="specificSizeSelect">
-                      <option selected>請選擇</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                    </select>
+                    <div class="row mx-auto g-3 align-items-center">
+                      <div class="col-auto px-0">
+                        <select class="form-select  w-no-100" id="specificSizeSelect">
+                          <option selected>請選擇</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-2 col-4">
+                        <input class="form-control" type="text" aria-label="">
+                      </div>
+                      <div class="col-1">人</div>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
